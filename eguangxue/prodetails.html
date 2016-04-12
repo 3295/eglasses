@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0" name="viewport" /> 
+<meta name = "format-detection" content = "telephone=no">
+<head>
+	<title>商品详情</title>
+	<link rel="stylesheet" type="text/css" href="res/css/style.css">
+	<script type="text/javascript" src="res/js/j171.js"></script>
+	<script type="text/javascript" src="res/js/js.js"></script>
+	<script type="text/javascript" src="res/js/jquery.spritespin.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			var W=$("body").width();
+            var H = 437*W/640; 
+			$("#bike2").spritespin({
+				width     : W,
+				height    : H,
+				frames    : 34,
+				image     : "res/images/bike.jpg",
+				frameTime : 60
+			});
+			$("#bike2").css('background-size',W*34+'px auto');
+		});
+	</script>
+</head>
+<body>
+	<div class="prodetails">
+		<a class="retu" href="#here" onclick="javascript:history.back();return false"></a>
+		<div id="bike2" unselectable="on" style="overflow: hidden;width:100%; background-image: url(&quot;res/images/bike.jpg&quot;); background-position: 0px 0px; background-repeat:repeat-x" ></div>
+		<div class="pron">
+			<div class="proname">
+				<p class="name">OAKLEY运动骑行近视光学镜架8033</p>
+				<p class="pri">￥<span>899</span><s>￥1190</s></p>
+			</div>
+			<a href="javascript:;"><span></span><p>收藏</p></a>
+		</div>
+		<div class="size">
+			<p>请选择规格</p>
+			<ul>
+				<li class="sel">
+					<a href="javascript:;">S</a>
+				</li>
+				<li>
+					<a href="javascript:;">M</a>
+				</li>
+				<li>
+					<a href="javascript:;">L</a>
+				</li>
+				<li>
+					<a href="javascript:;">XL</a>
+				</li>
+				<li>
+					<a href="javascript:;">XXL</a>
+				</li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+		<div class="prodeta">
+			<div class="deta_h">
+				<ul>
+					<li class="active">
+						<a href="javascript:;"><span>商品介绍</span></a>
+					</li>
+					<li>
+						<a href="javascript:;"><span>咨询与售后</span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="imgandsale">
+				<div class="aftersale img">
+					<img src="res/images/pro1.jpg">
+					<img src="res/images/pro2.jpg">
+				</div>
+				<div class="aftersale text">
+					<p class="p_h">退货说明</p>
+					<p>该商品支持7天无理由退货，请放心购买！详情请见“购买咨询”内具体细则</p>
+					<a href="shopadvice.html">购买咨询<span></span></a>
+				</div>
+			</div>
+		</div>
+		<div class="joincart">
+			<a class="cart" href="cart.html"><span></span></a>
+			<a class="shop" href="listsure.html">立即购买</a>
+		</div>
+	</div>
+	<script>
+    // var swiper = new Swiper('.swiper-container', {
+    //     pagination: '.swiper-pagination',
+    //     paginationClickable: true
+    // });
+    </script>
+</body>
+</html>
