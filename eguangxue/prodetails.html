@@ -6,28 +6,23 @@
 <head>
 	<title>商品详情</title>
 	<link rel="stylesheet" type="text/css" href="res/css/style.css">
-	<script type="text/javascript" src="res/js/j171.js"></script>
+	<script type="text/javascript" src="res/js/jquery.min.js"></script>
+	<script type="text/javascript" src="res/js/qo.js"></script>
 	<script type="text/javascript" src="res/js/js.js"></script>
 	<script type="text/javascript" src="res/js/jquery.spritespin.js"></script>
 	<script type="text/javascript">
 		$(function() {
-			var W=$("body").width();
-            var H = 437*W/640; 
-			$("#bike2").spritespin({
-				width     : W,
-				height    : H,
-				frames    : 34,
-				image     : "res/images/bike.jpg",
-				frameTime : 60
-			});
-			$("#bike2").css('background-size',W*34+'px auto');
+			var img=$("#rotateimg").val();
+			JS.prodetailspage.init(img);
 		});
 	</script>
 </head>
 <body>
 	<div class="prodetails">
 		<a class="retu" href="#here" onclick="javascript:history.back();return false"></a>
-		<div id="bike2" unselectable="on" style="overflow: hidden;width:100%; background-image: url(&quot;res/images/bike.jpg&quot;); background-position: 0px 0px; background-repeat:repeat-x" ></div>
+		<div id="rotatebox" unselectable="on"></div>
+		<!-- 隐藏域用于承载旋转产品图 -->
+		<input id="rotateimg" type="hidden" value="/eguangxue/res/images/bike88.png">
 		<div class="pron">
 			<div class="proname">
 				<p class="name">OAKLEY运动骑行近视光学镜架8033</p>
@@ -84,11 +79,5 @@
 			<a class="shop" href="listsure.html">立即购买</a>
 		</div>
 	</div>
-	<script>
-    // var swiper = new Swiper('.swiper-container', {
-    //     pagination: '.swiper-pagination',
-    //     paginationClickable: true
-    // });
-    </script>
 </body>
 </html>

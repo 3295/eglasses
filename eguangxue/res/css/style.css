@@ -149,38 +149,6 @@ a{
 .prolistpage .headerbox{
 	margin-bottom: 5px;
 }
-.prolistpage .seabox{
-	height: 30px;
-	padding: 5px;
-}
-.prolistpage .seabox .sea{
-	padding-left: 10px;
-	padding-right: 60px;
-	background: #ffffff;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	border-radius: 5px;
-	border: 1px solid #dadee5;
-	position: relative;
-}
-.prolistpage .seabox .sea input.tex{
-	width: 100%;
-	height: 30px;
-	border: none;
-	outline: none;
-}
-.prolistpage .seabox .sea input.sub{
-	width: 60px;
-	height: 30px;
-	background: url("../images/searchw.png") center no-repeat;
-	background-size: auto 18px;
-	background-color: #7cc8ec;
-	border: none;
-	outline: none;
-	position: absolute;
-	right: 0px;
-	top: 0px;
-}
 .prolistpage ul li{
 	width: 50%;
 	float: left;
@@ -220,7 +188,7 @@ a{
 	color: #888888;
 	position: absolute;
 	right: 0px;
-	top: 0px;
+	top: 8Uncaught SyntaxError: Unexpected identifierpx;
 	text-decoration: line-through;
 }
 .cartpage{
@@ -292,7 +260,7 @@ a{
 	height: 100px;
 	margin: 0px 70px 0px 110px;
 }
-.cartpage .pro .name a{ /*40*/
+.cartpage .pro .name a{
 	display: block;
 	padding: 30px 0px;
 	color: #555555;
@@ -638,9 +606,6 @@ a{
 	font-size: 12px;
 	color: #9b9b9b;
 }
-
-
-
 .listsure .addbox{
 	background: #ffffff;
 	background-image: url("../images/open.png");
@@ -667,7 +632,7 @@ a{
 .listsure .paymentbox{
 	background: #ffffff;
 	margin-bottom: 5px;
-	padding-left: 10px;
+	padding:0px 10px;
 }
 .listsure .paymentbox>p{
 	height: 40px;
@@ -709,19 +674,17 @@ a{
 }
 .listsure .probox{
 	background: #ffffff;
-	
+	padding: 0px 10px;
 }
 .listsure .probox h3{
 	height: 30px;
 	line-height: 30px;
 	font-size: 15px;
 	color: #000000;
-	padding-left: 10px;
 	font-weight: normal;
 	
 }
 .listsure .probox .pro{
-	margin-left: 10px;
 	border-top: 1px solid #e9ecf1;
 	border-bottom: 1px solid #e9ecf1;
 	position: relative;
@@ -740,11 +703,17 @@ a{
 }
 .listsure .probox .pro .pro_intro p.pro_name{
 	line-height: 20px;
+	height: 40px;
+	overflow: hidden;
 	font-size: 13px;
 	color: #000000;
 }
 .listsure .probox .pro .pro_intro p.pro_de{
 	line-height: 20px;
+	height: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 	font-size: 12px;
 	color: #999999;
 }
@@ -771,10 +740,9 @@ a{
 	width:100%;
 	height: 35px;
 	display: block;
-	background: #f7f7f7;
 	border: none;
 	font-size: 12px;
-	color: #999999;
+	color: #000000;
 	outline: none;
 }
 .listsure .probox>p{
@@ -844,39 +812,13 @@ a{
 	top: 12px;
 	z-index: 1;
 }
-
-.swiper-container{
-        width: 100%;
-        height: 300px;
-        border-bottom: 1px solid #dadee5;
+.prodetails #rotate{
+	overflow: hidden;
+	width:100%;
+	background-color: #ffffff;
+	background-position: 0px 0px; 
+	background-repeat:repeat-x;
 }
-.swiper-container.cli{
-	z-index:2;
-	position:fixed;
-	left:0px;
-	top:0px;
-	height:100%;
-	background:#555555;
-}
-.swiper-slide {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-        overflow: hidden;
-}
-.swiper-container .swiper-slide img{
-	width: 100%;
-}
-
 .prodetails .pron .proname p.name{
 	font-size: 13px;
 	color: #000000;
