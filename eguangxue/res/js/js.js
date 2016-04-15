@@ -1,66 +1,70 @@
 var JS={};
 JS.prolistpage = {
-	'init':function(){
+	'currpage':1,	//当前页码 默认1
+	'init':function(opt){
+		if(typeof(opt)=='undefined') opt = {};
+		if(!opt.ptype) opt.ptype = '';
 		var imgs = $(".prolistpage ul.probox li a .img");
 		imgs.height(imgs.width());
-
 		var dropload = $('.inner').dropload({
-	    domUp : {
-	        domClass   : 'dropload-up',
-	        domRefresh : '<div class="dropload-refresh">↓下拉刷新</div>',
-	        domUpdate  : '<div class="dropload-update">↑释放更新</div>',
-	        domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中...</div>'
-	    },
-	    domDown : {
-	        domClass   : 'dropload-down',
-	        domRefresh : '<div class="dropload-refresh">↑上拉加载更多</div>',
-	        domUpdate  : '<div class="dropload-update">↓释放加载</div>',
-	        domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中...</div>'
-	    },
-	    loadUpFn : function(me){
-	        $.ajax({
-	            type: 'GET',
-	            url: 'res/json/pro.json',
-	            dataType: 'json',
-	            success: function(data){
-	                var result = '';
-	                $.each(data.product,function(i,e){
-	                	result+="<li><a href='prodetails.html'><div class='img'><img src='"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>"
-	                })
-	                    $('ul.probox').html('');
-	                    $('ul.probox').prepend(result);
-	                    me.resetload();
-	            },
-	            error: function(xhr, type){
-	                me.resetload();
-	            }
-	        });
-	    },
-
-	    loadDownFn : function(me){
-	        $.ajax({
-	            type: 'GET',
-	            url: 'res/json/pro.json',
-	            data:{
-	             	currpage:"1",
-	             	ptype:"1",
-	             },
-	            dataType: 'json',
-	            success: function(data){
-	                var result = '';
-	                 $.each(data.product,function(i,e){
-	                	result+="<li><a href='prodetails.html'><div class='img'><img src='"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>"
-	                });
-	                $('ul.probox').append(result);
-	                    me.resetload();  
-	            },
-	            error: function(xhr, type){
-	            	console.log(xhr,type)
-	                me.resetload();
-	            }
-	        });
-	    }
-	});
+		    domUp : {
+		        domClass   : 'dropload-up',
+		        domRefresh : '<div class="dropload-refresh">↓下拉刷新</div>',
+		        domUpdate  : '<div class="dropload-update">↑释放更新</div>',
+		        domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中...</div>'
+		    },
+		    domDown : {
+		        domClass   : 'dropload-down',
+		        domRefresh : '<div class="dropload-refresh">↑上拉加载更多</div>',
+		        domUpdate  : '<div class="dropload-update">↓释放加载</div>',
+		        domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中...</div>'
+		    },
+		    loadUpFn : function(me){
+		        $.ajax({
+		            type: 'GET',
+		            url: 'res/json/pro.json',
+		            data:{
+		            	'ptype':opt.ptype,
+		            	'currpage':JS.prolistpage.currpage=1
+		            },
+		            dataType: 'json',
+		            success: function(data){
+		                var result = '';
+		                $.each(data.product,function(i,e){
+		                	result+="<li><a href='prodetails.html'><div class='img'><img src='"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>"
+		                })
+		                    $('ul.probox').html('');
+		                    $('ul.probox').prepend(result);
+		                    me.resetload();
+		            },
+		            error: function(xhr, type){
+		                me.resetload();
+		            }
+		        });
+		    },
+	 	    loadDownFn : function(me){
+		        $.ajax({
+		            type: 'GET',
+		            url: 'res/json/pro.json',
+		            data:{
+		            	'ptype':opt.ptype,
+		            	'currpage':++JS.prolistpage.currpage
+		            },
+		            dataType: 'json',
+		            success: function(data){
+		                var result = '';
+		                 $.each(data.product,function(i,e){
+		                	result+="<li><a href='prodetails.html'><div class='img'><img src='"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>"
+		                });
+		                $('ul.probox').append(result);
+		                    me.resetload();  
+		            },
+		            error: function(xhr, type){
+		                me.resetload();
+		            }
+		        });
+		    }
+		});
 	}
 };
 JS.cartpage={
