@@ -96,6 +96,7 @@ JS.cartpage={
 };
 JS.prodetailspage={
 	'init':function(img){
+		var price,present_price;
 		var W=$("body").width();
         var H = 437*W/640; 
 		$("#rotatebox").spritespin({
@@ -115,6 +116,9 @@ JS.prodetailspage={
 		});
 		$(".prodetails .size ul li").click(function(){
 			$(this).attr('class','sel').siblings().removeClass("sel");
+			var price=($(this).find('input')[0]).value;
+			var present_price=$(this).find('input')[1].value;
+			$('.proname p.pri').html("￥<span>"+present_price+"</span><s>￥"+price+"</s>");
 		})
 		$('.prodetails .prodeta .deta_h li a').click(function () {
 			var par = $(this).parent();
@@ -122,6 +126,11 @@ JS.prodetailspage={
 			par.addClass("active").siblings().removeClass('active');
 			$('.imgandsale .aftersale').eq(index).show().siblings().hide();
 		});
+		$(".prodetails .imgandsale .img").click(function(){
+			if ($(this).hasClass("cli")) {
+				$(this).removeClass("cli");
+			}else{$(this).addClass("cli")}
+		})
 	}
 };
 JS.shopadvicepage={
@@ -132,16 +141,6 @@ JS.shopadvicepage={
 			}else{
 				$(this).addClass("sel").siblings("p").show();
 			}
-		})
-		$(".prodetails .swiper-container").click(function(){
-			if ($(this).hasClass("cli")) {
-				$(this).removeClass("cli");
-			}else{$(this).addClass("cli")}
-		})
-		$(".prodetails .imgandsale .img").click(function(){
-			if ($(this).hasClass("cli")) {
-				$(this).removeClass("cli");
-			}else{$(this).addClass("cli")}
 		})
 	}
 };
