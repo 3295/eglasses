@@ -169,7 +169,7 @@ JS.shopadvicepage={
 };
 JS.listsurepage={
 	'init':function(name,tel,addr){
-		$('.listsure .addbox a').html("<p class='name'>"+name+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+tel+"</p>"+"<p class='add'>"+addr+"</p>");
+		$('.listsure .addbox a').html("<p class='name'>"+"name+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+tel+"</p>"+"<p class='add'>"+addr+"</p>");
 		// console.log(name,tel,addr);
 	}
 }
