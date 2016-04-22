@@ -22,6 +22,7 @@ JS.indexpage={
 		}
 	}
 };
+var width=0;
 JS.prolistpage = {
 	'currpage':1,	//当前页码 默认1
 	'init':function(opt){
@@ -29,6 +30,7 @@ JS.prolistpage = {
 		if(!opt.ptype) opt.ptype = '';
 		var imgs = $(".prolistpage ul.probox li a .img");
 		imgs.height(imgs.width());
+		width=imgs.width();
 		var dropload = $('.inner').dropload({
 		    domUp : {
 		        domClass   : 'dropload-up',
@@ -45,7 +47,7 @@ JS.prolistpage = {
 		    loadUpFn : function(me){
 		        $.ajax({
 		            type: 'GET',
-		            url: 'res/json/pro.json',
+		            url: opt.path+'/product/index_ajax.htm',
 		            data:{
 		            	'ptype':opt.ptype,
 		            	'currpage':JS.prolistpage.currpage=1
@@ -54,8 +56,8 @@ JS.prolistpage = {
 		            success: function(data){
 		                var result = '';
 		                $.each(data.product,function(i,e){
-		                	result+="<li><a href='prodetails.html'><div class='img'><img src='"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>"
-		                })
+		                	result+="<li><a href='"+opt.path+"/product/detial.htm?pid="+e.id+"'><div class='img' style='height:"+width+"px;'><img src='"+data.prefix_url+"/"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>"
+		                });
 		                    $('ul.probox').html('');
 		                    $('ul.probox').prepend(result);
 		                    me.resetload();
@@ -68,7 +70,7 @@ JS.prolistpage = {
 	 	    loadDownFn : function(me){
 		        $.ajax({
 		            type: 'GET',
-		            url: 'res/json/pro.json',
+		            url: opt.path+'/product/index_ajax.htm',
 		            data:{
 		            	'ptype':opt.ptype,
 		            	'currpage':++JS.prolistpage.currpage
@@ -77,7 +79,7 @@ JS.prolistpage = {
 		            success: function(data){
 		                var result = '';
 		                 $.each(data.product,function(i,e){
-		                	result+="<li><a href='prodetails.html'><div class='img'><img src='"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>"
+		                	result+="<li><a href='"+opt.path+"/product/detial.htm?pid="+e.id+"'><div class='img' style='height:"+width+"px;'><img src='"+data.prefix_url+"/"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>"
 		                });
 		                $('ul.probox').append(result);
 		                    me.resetload();  
