@@ -310,7 +310,7 @@ a{
 }
 .cartpage .pro .radio.checked i.full{
 	display: inline;
-	color: #7cc8ec;
+	color: #b81c22;
 }
 .cartpage .pro .radio.checked i:first-child{
 	display: none;
@@ -356,7 +356,7 @@ a{
 	right: 10px;
 	top: 0px;
 	line-height: 100px;
-	color: #ea7f0d;
+	color: #b81c22;
 	font-size: 12px;
 	text-align: right;
 }
@@ -425,7 +425,7 @@ a{
 }
 .cartpage .allprice .sellall.checked i.full{
 	display: inline;
-	color: #7cc8ec;
+	color: #b81c22;
 }
 .cartpage .allprice .sellall.checked i:first-child{
 	display: none;
@@ -451,7 +451,7 @@ a{
 }
 .cartpage .allprice p span{
 	font-size: 15px;
-	color: #f38200;
+	color: #b81c22;
 }
 .cartpage .allprice p span b{
 	font-weight: normal;
@@ -461,7 +461,7 @@ a{
 	width: 50px;
 	height: 32px;
 	margin: 9px 10px;
-	background: #7cc8ec;
+	background: #b81c22;
 	font-size: 15px;
 	color: #ffffff;
 	text-align: center;
@@ -827,7 +827,7 @@ a{
 	width: 250px;
 	height: 45px;
 	margin: 0px auto;
-	background: #7cc8ec;
+	background: #b81c22;
 	font-size: 18px;
 	color: #ffffff;
 	text-align: center;
@@ -872,7 +872,7 @@ a{
 .prodetails .pron .proname p.pri{
 	height: 30px;
 	font-size: 13px;
-	color: #ea7f0d;
+	color: #b81c22;
 }
 .prodetails .pron .proname p.pri s{
 	margin-left: 15px;
@@ -905,7 +905,7 @@ a{
 .prodetails .pron>a.act p{
 	color: #da351f;
 }
-.prodetails .size{
+.prodetails .box{
 	background: #ffffff;
 	border-bottom: 1px solid #dadee5;
 	border-top: 1px solid #dadee5;
@@ -933,9 +933,32 @@ a{
 	padding: 5px 23px;
 }
 .prodetails .size ul li.sel a{
-	border: 1px solid #7cc8ec;
-	color: #7cc8ec;
+	border: 1px solid #b81c22;
+	color: #b81c22;
 }
+.prodetails .trans{
+	height: 34px;
+}
+.prodetails .trans p{
+	line-height: 34px;
+	font-size: 12px;
+	color: #999999;
+	padding-left: 20px;
+	margin-right: 15px;
+	position: relative;
+	float: left;
+}
+.prodetails .trans p span{
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url('../images/icon1.png') no-repeat center;
+	background-size: auto 14px;
+	position: absolute;
+	left: 0px;
+	top: 7px;
+}
+
 .prodetails .prodeta .deta_h{
 	height: 40px;
 	line-height: 40px;
@@ -964,11 +987,10 @@ a{
 	padding: 10px;
 }
 .prodetails .prodeta .deta_h ul li.active a span{
-	border-bottom: 2px solid #7cc8ec;
+	border-bottom: 2px solid #b81c22;
 }
 .prodetails .prodeta .imgandsale{
 	position: relative;
-	padding-bottom: 50px;
 }
 .prodetails .prodeta .imgandsale .img{
 	display: block;
@@ -1003,26 +1025,16 @@ a{
 	line-height: 18px;
 	padding: 0px 10px;
 }
-.prodetails .prodeta .imgandsale .aftersale a{
+.prodetails .prodeta .imgandsale .aftersale h3{
 	display: block;
 	font-size: 14px;
 	color: #555555;
 	line-height: 45px;
 	padding: 0px 10px;
 	margin-top: 10px;
-	margin-bottom: 25px;
 	border-top: 1px solid #dadee5;
 	border-bottom: 1px solid #dadee5;
 	position: relative;
-}
-.prodetails .prodeta .imgandsale .aftersale a span{
-	background: url("../images/open.png") no-repeat center;
-	background-size: auto 15px;
-	position: absolute;
-	right: 0px;
-	top: 0px;
-	width: 35px;
-	height: 35px;
 }
 .prodetails .joincart{
 	width: 100%;
@@ -1041,41 +1053,76 @@ a{
 	border-radius: 3px;
 }
 .prodetails .joincart a.cart{
-	width: 80px;
+	width: 60px;
 	height: 30px;
 	border: 1px solid #999999;
-	background: url("../images/cart.png") center no-repeat;
-	background-size: 20px auto;
 	position: absolute;
 	left: 20px;
 	top: 9px;
 }
-.prodetails .joincart a.shop{
-	width: 120px;
+.prodetails .joincart a.cart span{
+	display: block;
+	width: 30px;
 	height: 30px;
-	background: #7cc8ec;
+	margin: 0px auto;
+	background: url("../images/cart.png") center no-repeat;
+	background-size: 25px auto;
+	position: relative;
+}
+.prodetails .joincart a.cart span em{
+	display: block;
+	width: 14px;
+	height: 14px;
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	border-radius: 7px;
+	background: #b81c22;
+	position: absolute;
+	right: -6px;
+	top: 0px;
+	color: #ffffff;
+	line-height: 12px;
+	text-align: center;
+	font-size: 12px;
+	font-style: normal;
+}
+.prodetails .joincart a.join{
+	width: 100px;
+	height: 30px;
+	background: #b81c22;
 	font-size: 13px;
 	color: #ffffff;
 	line-height: 30px;
 	text-align: center;
 	position: absolute;
-	left: 140px;
+	left: 95px;
 	top: 9px;
 }
-.shopadvicepage .questionbox{
+.prodetails .joincart a.shop{
+	width: 100px;
+	height: 30px;
+	background: #b81c22;
+	font-size: 13px;
+	color: #ffffff;
+	line-height: 30px;
+	text-align: center;
+	position: absolute;
+	right: 20px;
+	top: 9px;
+}
+.prodetails .imgandsale .text h3.sel span{
+	background: url('../images/open_off.png') no-repeat center;
+	background-size: 15px auto;
+}
+.prodetails .questionbox{
 	background: #ffffff;
 	padding: 0px 10px;
-	margin-top: 10px;
 }
-.shopadvicepage .questionbox>p{
-	font-size: 14px;
-	line-height: 30px;
-	color: #999999;
-}
-.shopadvicepage .questionbox .quest{
+.prodetails .questionbox .quest{
 	border-bottom: 1px solid #dadee5;
 }
-.shopadvicepage .questionbox .quest h3{
+.prodetails .questionbox .quest a{
+	display: block;
 	font-size: 12px;
 	color: #000000;
 	line-height: 45px;
@@ -1084,11 +1131,11 @@ a{
 	background: url("../images/open_on.png") no-repeat right center;
 	background-size: 15px auto;
 }
-.shopadvicepage .questionbox .quest h3.sel{
+.prodetails .questionbox .quest a.sel{
 	background: url("../images/open_off.png") no-repeat right center;
 	background-size: 15px auto;
 }
-.shopadvicepage .questionbox .quest p{
+.prodetails .questionbox .quest p{
 	display: none;
 	font-size: 12px;
 	color: #555555;

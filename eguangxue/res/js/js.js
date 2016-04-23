@@ -32,41 +32,41 @@ JS.prolistpage = {
 		imgs.height(imgs.width());
 		width=imgs.width();
 		var dropload = $('.inner').dropload({
-		    domUp : {
-		        domClass   : 'dropload-up',
-		        domRefresh : '<div class="dropload-refresh">↓下拉刷新</div>',
-		        domUpdate  : '<div class="dropload-update">↑释放更新</div>',
-		        domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中...</div>'
-		    },
+		    // domUp : {
+		    //     domClass   : 'dropload-up',
+		    //     domRefresh : '<div class="dropload-refresh">↓下拉刷新</div>',
+		    //     domUpdate  : '<div class="dropload-update">↑释放更新</div>',
+		    //     domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中...</div>'
+		    // },
 		    domDown : {
 		        domClass   : 'dropload-down',
 		        domRefresh : '<div class="dropload-refresh">↑上拉加载更多</div>',
 		        domUpdate  : '<div class="dropload-update">↓释放加载</div>',
 		        domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中...</div>'
 		    },
-		    loadUpFn : function(me){
-		        $.ajax({
-		            type: 'GET',
-		            url: opt.path+'/product/index_ajax.htm',
-		            data:{
-		            	'ptype':opt.ptype,
-		            	'currpage':JS.prolistpage.currpage=1
-		            },
-		            dataType: 'json',
-		            success: function(data){
-		                var result = '';
-		                $.each(data.product,function(i,e){
-		                	result+="<li><a href='"+opt.path+"/product/detial.htm?pid="+e.id+"'><div class='img' style='height:"+width+"px;'><img src='"+data.prefix_url+"/"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>"
-		                });
-		                    $('ul.probox').html('');
-		                    $('ul.probox').prepend(result);
-		                    me.resetload();
-		            },
-		            error: function(xhr, type){
-		                me.resetload();
-		            }
-		        });
-		    },
+		    // loadUpFn : function(me){
+		    //     $.ajax({
+		    //         type: 'GET',
+		    //         url: opt.path+'/product/index_ajax.htm',
+		    //         data:{
+		    //         	'ptype':opt.ptype,
+		    //         	'currpage':JS.prolistpage.currpage=1
+		    //         },
+		    //         dataType: 'json',
+		    //         success: function(data){
+		    //             var result = '';
+		    //             $.each(data.product,function(i,e){
+		    //             	result+="<li><a href='"+opt.path+"/product/detial.htm?pid="+e.id+"'><div class='img' style='height:"+width+"px;'><img src='"+data.prefix_url+"/"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>"
+		    //             });
+		    //                 $('ul.probox').html('');
+		    //                 $('ul.probox').prepend(result);
+		    //                 me.resetload();
+		    //         },
+		    //         error: function(xhr, type){
+		    //             me.resetload();
+		    //         }
+		    //     });
+		    // },
 	 	    loadDownFn : function(me){
 		        $.ajax({
 		            type: 'GET',
@@ -156,11 +156,7 @@ JS.prodetailspage={
 				$(this).removeClass("cli");
 			}else{$(this).addClass("cli")}
 		})
-	}
-};
-JS.shopadvicepage={
-	'init':function(){
-		$(".shopadvicepage .quest h3").click(function(){
+		$(".prodetails .quest a").click(function(){
 			if ($(this).hasClass("sel")) {
 				$(this).removeClass("sel").siblings("p").hide();
 			}else{
