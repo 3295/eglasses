@@ -3,6 +3,11 @@
 	padding: 0px;
 	font-family: "微软雅黑";
 }
+*, :focus, :hover, :active {
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+outline: 0;
+}
+
 body{
 	background: #efeff4;
 }
@@ -273,6 +278,22 @@ a{
 	margin-bottom: 10px;
 	background: #ffffff;
 }
+.cartpage .pro a.del{
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	/*-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius: 8px;*/
+	font-size: 16px;
+	color: #000000;
+	font-weight: bold;
+/*	background: #b81c22;*/
+	position: absolute;
+	right: 20px;
+	bottom: 5px;
+}
 .cartpage .pro .img{
 	display: block;
 	width: 60px;
@@ -318,23 +339,22 @@ a{
 .cartpage .pro .name{
 	display: block;
 	width: auto;
-	height: 100px;
-	margin: 0px 70px 0px 110px;
+	margin: 0px 20px 0px 110px;
 }
 .cartpage .pro .name a{
 	display: block;
-	padding: 30px 0px;
+	line-height: 18px;
+	height: 36px;
+	padding-top: 10px;
+	overflow: hidden;
 	color: #555555;
 }
-.cartpage .pro .name p{
+.cartpage .pro .name a p{
 	width: auto;
-	line-height: 40px;
-	height: 40px;
-	overflow: hidden;
+	line-height: 18px;
+	height: 36px;
 	font-size: 12px;
 	font-weight: normal;
-	white-space: nowrap;
-	text-overflow: ellipsis;
 }
 .cartpage .pro .name span{
 	display: block;
@@ -351,12 +371,22 @@ a{
 .cartpage .pro .price{
 	display: block;
 	width: 60px;
-	height: 100px;
+	height: 20px;
 	position: absolute;
-	right: 10px;
-	top: 0px;
-	line-height: 100px;
+	right: 20px;
+	top: 50px;
 	color: #b81c22;
+	font-size: 12px;
+	text-align: right;
+}
+.cartpage .pro .size{
+	display: block;
+	width: 60px;
+	height:20px;
+	position: absolute;
+	left: 80px;
+	top: 50px;
+	color: #999999;
 	font-size: 12px;
 	text-align: right;
 }
@@ -366,7 +396,7 @@ a{
 	height: 24px;
 	position: absolute;
 	bottom: 5px;
-	right: 10px;
+	left: 110px;
 }
 .cartpage .pro .count input{
 	float: left;
@@ -469,9 +499,6 @@ a{
 	-moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius:3px;
-}
-.cartpage .allprice a.cartsub:active{
-	background:#9FE434;
 }
 .nullpage{
 	display: block;

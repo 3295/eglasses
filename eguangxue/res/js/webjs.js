@@ -33,3 +33,7 @@ JS.appointmentpage={
 		})
 	}
 }
+JS.loginpage={
+	'init':function(){
+	}
+}

@@ -117,6 +117,11 @@ JS.cartpage={
 			}
 		JS.cartpage._allprice();
 		});
+		$('.pro a.del').click(function(){
+			$(this).parent('.pro').remove();
+			JS.cartpage._allprice();
+		})
+
 	},
 	'count_plus':function(btn){
 		var inp = btn.prev();
