@@ -14,6 +14,13 @@
 		$(function() {
 			var img=$("#rotateimg").val();
 			JS.prodetailspage.init(img);
+			$(".prodetails .pron a").click(function(){
+				if($(this).hasClass("act")){
+					$(this).removeClass("act");
+				}else{
+					$(this).addClass("act");
+				}
+			});
 		});
 	</script>
 </head>
@@ -104,9 +111,14 @@
 			</div>
 		</div>
 		<div class="joincart">
-			<a class="cart" href="cart.html"><span><em>2</em></span></a>
-			<a class='join' href="javascript:;">加入购物车</a>
-			<a class="shop" href="listsure.html">立即下单</a>
+			<ul>
+				<li><a class="cart" href="cart.html"><span><em>12</em></span></a></li>
+				<li><a class='join' href="javascript:;">加入购物车</a></li>
+				<li><a class="shop" href="listsure.html">立即下单</a></li>
+			</ul>
+			
+			
+			
 		</div>
 	</div>
 </body>

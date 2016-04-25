@@ -387,7 +387,7 @@ a{
 	font-size: 14px;
 }
 .cartpage .pro .count a:active{
-	background: #7cc8ec;
+	background: #b81c22;
 }
 .cartpage .pro .count input{
 	display: block;
@@ -648,32 +648,64 @@ a{
 .orderlist .nulllist .link a:last-child{
 	border-right:none;
 }
-.listsure .addbox{
-	background: #ffffff;
+.listsure .addbox a{
+	display: block;
 	background-image: url("../images/open.png");
 	background-repeat: no-repeat;
 	background-size: auto 15px;
 	background-position: right 10px center;
 	margin:5px 0px;
-	padding: 6px 10px;
+	padding: 6px 30px 10px 10px;
 	position: relative;
 }
-.listsure .addbox a{
-	display: block;
-	padding-right: 20px;
+.listsure .addbox a.add{
+	display: none;
 }
-.listsure .addbox p.name{
+.listsure .addbox a.add p{
 	line-height: 30px;
 	font-size: 14px;
-	color: #8c8c8c;
+	color: #333333;
 }
-.listsure .addbox p.add{
+.listsure .addbox{
+	background: url('../images/line.png') bottom repeat-x;
+	background-size: auto 4px;
+	background-color: #ffffff;
+	padding-left: 30px;
+}
+.listsure .addbox a.useradd p.name{
+	height: 25px;
+	line-height: 25px;
+	font-size: 13px;
+	color: #333333;
+	padding-right: 150px;
+	position: relative;
+}
+.listsure .addbox a.useradd p.name span{
+	position: absolute;
+	right: 60px;
+	top: 0px;
+}
+.listsure .addbox a.useradd p.address{
 	font-size: 12px;
-	color: #888888;
+	line-height: 15px;
+	color: #333333;
+	height: 30px;
+	/*overflow: hidden;*/
+	position: relative;
+}
+.listsure .addbox a.useradd p.address em{
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url('../images/map.png') center no-repeat;
+	background-size: auto 25px;
+	position: absolute;
+	left: -35px;
+	top: -15px;
 }
 .listsure .paymentbox{
 	background: #ffffff;
-	margin-bottom: 5px;
+	margin: 5px 0px;
 	padding:0px 10px;
 }
 .listsure .paymentbox>p{
@@ -714,11 +746,7 @@ a{
 .listsure .paymentbox .pay p.active span{
 	background-position: 0px 0px;
 }
-.listsure .probox{
-	background: #ffffff;
-	padding: 0px 10px;
-}
-.listsure .probox h3{
+.listsure h3{
 	height: 30px;
 	line-height: 30px;
 	font-size: 15px;
@@ -726,31 +754,32 @@ a{
 	font-weight: normal;
 	
 }
-.listsure .probox .pro{
-	border-top: 1px solid #e9ecf1;
+.listsure .pro{
+	background: #ffffff;
+	padding: 0px 10px;
 	border-bottom: 1px solid #e9ecf1;
 	position: relative;
 }
-.listsure .probox .pro .img{
+.listsure .pro .img{
 	height: 80px;
 	position: absolute;
-	left: 0px;
+	left: 10px;
 	top: 5px;
 }
-.listsure .probox .pro .img img{
+.listsure .pro .img img{
 	height: 100%;
 }
-.listsure .probox .pro .pro_intro{
-	padding: 5px 5px 5px 90px;
+.listsure .pro .pro_intro{
+	padding: 5px 5px 5px 100px;
 }
-.listsure .probox .pro .pro_intro p.pro_name{
+.listsure .pro .pro_intro p.pro_name{
 	line-height: 20px;
 	height: 40px;
 	overflow: hidden;
 	font-size: 13px;
 	color: #000000;
 }
-.listsure .probox .pro .pro_intro p.pro_de{
+.listsure .pro .pro_intro p.pro_de{
 	line-height: 20px;
 	height: 20px;
 	overflow: hidden;
@@ -759,26 +788,74 @@ a{
 	font-size: 12px;
 	color: #999999;
 }
-.listsure .probox .pro .pro_intro p.pro_pri{
+.listsure .pro .pro_intro .pro_pri{
+	position: relative;
+	padding-left: 80px;
+	height: 40px;
+}
+.listsure .pro .pro_intro .pro_pri span{
 	line-height: 40px;
 	font-size: 13px;
-	color: #000000;
-	position: relative;
-}
-.listsure .probox .pro .pro_intro p.pro_pri em{
-	font-size: 15px;
-	color: #ea7f0d;
+	color: #000000;	
 	position: absolute;
-	right: 0px;
+	left: 0px;
 	top: 0px;
-	font-style: normal;
 }
-.listsure .probox .input{
+.listsure .pro .pro_intro .pro_pri span b{
+	font-weight: normal;
+}
+.listsure .pro .count{
+	display: block;
+	width: 72px;
+	height: 24px;
+	position: absolute;
+	bottom: 7px;
+	right: 10px;
+}
+.listsure .pro .count input{
+	float: left;
+}
+.listsure .pro .count a{
+	display: block;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	font-size: 12px;
+	background: #d7d7d7;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	float: left;
+}
+.listsure .pro .count a i{
+	font-size: 14px;
+}
+.listsure .pro .count a:active{
+	background: #b81c22;
+}
+.listsure .pro .count input{
+	display: block;
+	height: 22px;
+	border: none;
+	border-bottom: 1px solid #d7d7d7;
+	border-top: 1px solid #d7d7d7;
+	width: 24px;
+	text-align: center;
+	font-size: 12px;
+	color: #333333;
+	outline: none;
+	-webkit-appearance: none; 
+	appearance:none;
+ 	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	border-radius:0;
+}
+.listsure .input{
+	background: #ffffff;
 	margin:5px;
 	padding-left: 10px;
 	border:1px solid #dadee5;
 }
-.listsure .probox .input input{
+.listsure .input input{
 	width:100%;
 	height: 35px;
 	display: block;
@@ -787,31 +864,17 @@ a{
 	color: #000000;
 	outline: none;
 }
-.listsure .probox>p{
-	font-size: 14px;
-	color: #999999;
-	line-height: 30px;
-	margin-left: 10px;
-	position: relative;
-
-}
-.listsure .probox>p span{
-	color: #000000;
-	position: absolute;
-	right: 8px;
-	top: 0px;
-}
-.listsure .probox h4{
+.listsure h4{
+	background: #ffffff;
 	font-weight: normal;
 	line-height: 40px;
 	color: #000000;
 	font-size: 14px;
 	position: relative;
-	margin-left: 10px;
-	border-top: 1px solid #e9ecf1;
+	padding-left: 10px;
 }
-.listsure .probox h4 span{
-	color: #ea7f0d;
+.listsure h4 span{
+	color: #b81c22;
 	position: absolute;
 	right: 8px;
 	top: 0px;
@@ -1046,21 +1109,26 @@ a{
 	background: #ffffff;
 	z-index: 2;
 }
-.prodetails .joincart a{
+.prodetails .joincart ul li{
+	width: 33%;
+	height: 100%;
+	float: left;
+	list-style-type: none;
+}
+.prodetails .joincart ul li a{
 	display: block;
+	height: 30px;
+	margin: 10px auto;
 	-webkit-border-radius:3px;
 	-moz-border-radius:3px;
 	border-radius: 3px;
 }
-.prodetails .joincart a.cart{
+.prodetails .joincart ul li a.cart{
 	width: 60px;
 	height: 30px;
 	border: 1px solid #999999;
-	position: absolute;
-	left: 20px;
-	top: 9px;
 }
-.prodetails .joincart a.cart span{
+.prodetails .joincart ul li a.cart span{
 	display: block;
 	width: 30px;
 	height: 30px;
@@ -1069,7 +1137,7 @@ a{
 	background-size: 25px auto;
 	position: relative;
 }
-.prodetails .joincart a.cart span em{
+.prodetails .joincart ul li a.cart span em{
 	display: block;
 	width: 14px;
 	height: 14px;
@@ -1086,7 +1154,7 @@ a{
 	font-size: 12px;
 	font-style: normal;
 }
-.prodetails .joincart a.join{
+.prodetails .joincart ul li a.join{
 	width: 100px;
 	height: 30px;
 	background: #b81c22;
@@ -1094,11 +1162,8 @@ a{
 	color: #ffffff;
 	line-height: 30px;
 	text-align: center;
-	position: absolute;
-	left: 95px;
-	top: 9px;
 }
-.prodetails .joincart a.shop{
+.prodetails .joincart ul li a.shop{
 	width: 100px;
 	height: 30px;
 	background: #b81c22;
@@ -1106,9 +1171,6 @@ a{
 	color: #ffffff;
 	line-height: 30px;
 	text-align: center;
-	position: absolute;
-	right: 20px;
-	top: 9px;
 }
 .prodetails .imgandsale .text h3.sel span{
 	background: url('../images/open_off.png') no-repeat center;

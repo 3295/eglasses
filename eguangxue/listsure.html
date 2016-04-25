@@ -5,6 +5,7 @@
 <meta name = "format-detection" content = "telephone=no">
 <head>
 	<title>订单确认</title>
+	<link rel="stylesheet" type="text/css" href="res/font/iconfont.css">
 	<link rel="stylesheet" type="text/css" href="res/css/style.css">
 	<script src="res/js/jquery.min.js"></script>
 	<script src="res/js/qo.js"></script>
@@ -22,34 +23,39 @@
 			<a href="index.html"></a>
 		</div>
 		<div class="addbox">
-			<a href="eguangxue1:///showMessage:添加收货地址/">
-				<p class="name">添加收货地址</p>
-				<p class="add"></p>
+			<a class='add' href="eguangxue1:///showMessage:添加收货地址/">
+				<p>添加收货地址</p>
+			</a>
+			<a class='useradd' href="javascript:;">
+				<p class='name'>收货人:李可可<span>13222222222</span></p>
+				<p class='address'><em></em>收货地址：<span>北京市朝阳区百子湾路后现代城14#305</span></p>
 			</a>
 		</div>
-		<div class="paymentbox">
-			<p>支付方式<a href="javascript:;"></a></p>
-			<div class="pay">
-				<p class="alipay active"><img src="res/images/pay_alipay.png">支付宝支付<span></span></p>
-			</div>
-		</div>
-		<div class="probox">
-			<h3>啦啦啦眼镜专卖</h3>
 			<div class="pro">
 				<div class="img"><img src="res/images/pro1.jpg"></div>
 				<div class="pro_intro">
 					<p class="pro_name">OAKLEY运动骑行近视光学镜架8033</p>
 					<p class="pro_de">镜框加精片等</p>
-					<p class="pro_pri">￥29.5&times;<span>2</span><em>￥58</em></p>
+					<div class="pro_pri">
+						<span>￥<b>1130</b></span>
+						<div class="count">
+		 					<a href="javascript:;" onclick="javascript:JS.listsurepage.min($(this))"><i class="iconfont">&#xe729;</i></a>
+							<input type="text" value="1">
+							<a href="javascript:;" onclick="javascript:JS.listsurepage.plus($(this))"><i class="iconfont">&#xe727;</i></a>
+		 				</div>
+					</div>
+				</div>
+			</div>
+			<div class="paymentbox">
+				<p>支付方式<a href="javascript:;"></a></p>
+				<div class="pay">
+					<p class="alipay active"><img src="res/images/pay_alipay.png">支付宝支付<span></span></p>
 				</div>
 			</div>
 			<div class="input">
 				<input class="message"type="text" value="" placeholder="给卖家留言">
 			</div>
-			<p>商品金额<span>￥28.50</span></p>
-			<p>运费<span>请填写收货地址后计算运费</span></p>
-			<h4>应付金额<span>￥78.50</span></h4>
-		</div>
+			<h4>应付金额<span>￥1130</span></h4>
 		<div class="btn"><a href="javascript:;">提交订单</a></div>
 	</div>
 </body>

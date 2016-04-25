@@ -104,7 +104,7 @@ JS.cartpage={
 					$('.cartpage a.sellall').addClass('checked');
 				}
 			}
-		_allprice();
+		JS.cartpage._allprice();
 		});
 
 		$('.cartpage .sellall').click(function(e){
@@ -115,8 +115,30 @@ JS.cartpage={
 				$(this).addClass('checked');
 				$('.cartpage .pro').find('div.radio').addClass('checked');
 			}
-		_allprice();
+		JS.cartpage._allprice();
 		});
+	},
+	'count_plus':function(btn){
+		var inp = btn.prev();
+		var count = parseInt(inp.val())+1;
+		inp.val(count);
+		JS.cartpage._allprice();
+	},
+	'count_mins':function(btn){
+		var inp = btn.next();
+		var count = parseInt(inp.val())-1;
+		if(count<=0) count = 1;
+		inp.val(count);
+		JS.cartpage._allprice();
+	},
+	'_allprice':function(){
+		var price = 0;
+		$.each($('.cartpage .pro'), function(i, v){
+			if($(v).find('div.radio').hasClass('checked')){
+				price += parseFloat($(v).find('.price span').text())*parseInt($(v).find('.count input').val());
+			}
+		});
+		$('.allprice p b').html(price.toFixed(2));
 	}
 };
 JS.prodetailspage={
@@ -132,13 +154,7 @@ JS.prodetailspage={
 			frameTime : 120
 		});
 		$("#rotatebox").css({'background-image':img,'background-size':W*8+'px auto'});
-		$(".prodetails .pron a").click(function(){
-			if($(this).hasClass("act")){
-				$(this).removeClass("act");
-			}else{
-				$(this).addClass("act");
-			}
-		});
+		
 		$(".prodetails .size ul li").click(function(){
 			$(this).attr('class','sel').siblings().removeClass("sel");
 			var price=($(this).find('input')[0]).value;
@@ -167,29 +183,26 @@ JS.prodetailspage={
 };
 JS.listsurepage={
 	'init':function(name,tel,addr){
-		$('.listsure .addbox a').html("<p class='name'>"+"name+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+tel+"</p>"+"<p class='add'>"+addr+"</p>");
-		// console.log(name,tel,addr);
+		$('.listsure .addbox a.useradd').html("<p class='name'>"+name+"<span>"+tel+"</span></p><p class='address'><span>"+addr+"</span></p>");
+	},
+	'plus':function(btn){
+		var inp = btn.prev();
+		var count = parseInt(inp.val())+1;
+		inp.val(count);
+		JS.listsurepage.allpri();
+	},
+	'min':function(btn){
+		var inp = btn.next();
+		var count = parseInt(inp.val())-1;
+		if(count<=0) count = 1;
+		inp.val(count);
+		JS.listsurepage.allpri();
+	},
+	'allpri':function(){
+		var price=0;
+		var pro_pri=$('.listsure .pro .pro_intro .pro_pri');
+		var allpri=parseFloat($(pro_pri).find('span b').text())*parseInt($(pro_pri).find('.count input').val());
+		$('h4 span').html('￥'+allpri);
 	}
 }
-function count_plus(btn){
-	var inp = btn.prev();
-	var count = parseInt(inp.val())+1;
-	inp.val(count);
-	_allprice();
-}
-function count_mins(btn){
-	var inp = btn.next();
-	var count = parseInt(inp.val())-1;
-	if(count<=0) count = 1;
-	inp.val(count);
-	_allprice();
-}
-function _allprice(){
-	var price = 0;
-	$.each($('.cartpage .pro'), function(i, v){
-		if($(v).find('div.radio').hasClass('checked')){
-			price += parseFloat($(v).find('.price span').text())*parseInt($(v).find('.count input').val());
-		}
-	});
-	$('.allprice p b').html(price.toFixed(2));
-}
+
