@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0" name="viewport" /> 
+<head>
+	<title>上门预约</title>
+	<link rel="stylesheet" type="text/css" href="res/css/webstyle.css">
+	<script src='res/js/jquery.min.js'></script>
+	<script src='res/js/qo.js'></script>
+	<script src='res/js/webjs.js'></script>
+	<script>
+		$(function(){
+			JS.appointmentpage.init();
+		});
+	</script>
+</head>
+<body>
+	<div class='appointmentpage'>
+		<div class='headerbox'>
+			<a class='search' href="javascript:;"></a>
+			<img src="res/images/logo.png">
+			<a class='cart' href="javascript:;"></a>
+		</div>
+		<div class='banbox'>
+			<img src="res/images/appoin_ban.png">
+		</div>
+		<form>
+			<div class='name'>
+				<p>姓名：</p>
+				<input type='text' value='' placeholder='请填写配镜人姓名'>
+			</div>
+			<div class='tel'>
+				<p>电话：</p>
+				<input type='text' value='' placeholder='请填写配镜人联系方式'>
+			</div>
+			<div class='sex'>
+				<p>性别：</p>
+				<a class='boy sel'><span><em></em></span>男</a>
+				<a class='girl'><span><em></em></span>女</a>
+			</div>
+			<div class='city'>
+				<p>城市：</p>
+				<input type='text' value='' placeholder='请填写配镜人所在城市'>
+			</div>
+			<div class='addr'>
+				<p>地址：</p>
+				<input type='text' value='' placeholder='请填写配镜人详细地址'>
+			</div>
+			<input class='sub' type='submit' value='提交'>
+		</form>
+		<div class='footerbox'>
+			<ul>
+				<li class='bar1'>
+					<a href="javascript:;">
+						<span></span><p>首页</p>
+					</a>
+				</li>
+				<li class='bar2 active'>
+					<a href="javascript:;">
+						<span></span><p>上门预约</p>
+					</a>
+				</li>
+				<li class='bar3'>
+					<a href="javascript:;">
+						<span></span><p>门店查询</p>
+					</a>
+				</li>
+				<li class='bar4'>
+					<a href="javascript:;">
+						<span></span><p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

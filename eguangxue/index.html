@@ -5,10 +5,10 @@
 <meta name = "format-detection" content = "telephone=no">
 <head>
 	<title>首页</title>
-	<link rel="stylesheet" type="text/css" href="res/css/style.css">
+	<link rel="stylesheet" type="text/css" href="res/css/webstyle.css">
 	<script src="res/js/jquery.min.js"></script>
 	<script src="res/js/qo.js"></script>
-	<script src="res/js/js.js"></script>
+	<script src="res/js/webjs.js"></script>
 	<script src="res/js/scroll.js"></script>
 	<script>
 		$(function(){
@@ -18,6 +18,21 @@
 </head>
 <body>
 	<div class="indexpage">
+		<div class='headerbox'>
+			<a class='search' href="javascript:;"></a>
+			<img src="res/images/logo.png">
+			<a class='cart' href="javascript:;"></a>
+		</div>
+		<div class='item'>
+			<ul>
+				<li class='act'><a href="javascript:;">首页</a></li>
+				<li><a href="javascript:;">近视镜</a></li>
+				<li><a href="javascript:;">太阳镜</a></li>
+				<li><a href="javascript:;">美瞳隐形</a></li>
+				<li><a href="javascript:;">功能眼镜</a></li>
+				<div class='cle'></div>
+			</ul>
+		</div>
 		<div class="scroll">
 			<div class="slide_01" id="slide_01">
 				<div class="mod_01"><a href="#"><img src="res/images/banner.png"></a></div>
@@ -29,14 +44,40 @@
 				<div id="slide_01_dot"></div>
 			</div>
 		</div>
-		<div class="specialbox">
-			<a href="prolist.html"><img src="res/images/special1.png"></a>
+		<div class='specialbox'>
+			<div class="special">
+				<a href="prolist.html"><img src="res/images/special1.png"></a>
+			</div>
+			<div class="special">
+				<a href="prolist.html"><img src="res/images/special1.png"></a>
+			</div>
+			<div class="special">
+				<a href="prolist.html"><img src="res/images/special1.png"></a>
+			</div>
 		</div>
-		<div class="specialbox">
-			<a href="prolist.html"><img src="res/images/special1.png"></a>
-		</div>
-		<div class="specialbox">
-			<a href="prolist.html"><img src="res/images/special1.png"></a>
+		<div class='footerbox'>
+			<ul>
+				<li class='bar1 active'>
+					<a href="javascript:;">
+						<span></span><p>首页</p>
+					</a>
+				</li>
+				<li class='bar2'>
+					<a href="appointment.html">
+						<span></span><p>上门预约</p>
+					</a>
+				</li>
+				<li class='bar3'>
+					<a href="javascript:;">
+						<span></span><p>门店查询</p>
+					</a>
+				</li>
+				<li class='bar4'>
+					<a href="javascript:;">
+						<span></span><p>我的</p>
+					</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </body>
