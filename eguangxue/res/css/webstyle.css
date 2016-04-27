@@ -769,7 +769,7 @@ a{
 	position: relative;
 } 
 .myorderpage .list .listbox .pro a{
-	text-decoration: none;
+	display: block;
 }
 .myorderpage .list .listbox .pro img{
 	height: 80px;
@@ -885,4 +885,9 @@ a{
 }
 .myorderpage .nulllist .link a:last-child{
 	border-right:none;
+}
+.orderdetailspage .anarchy{
+	margin-top: 50px;
+	height: 100px;
+	background: #b81c22;
 }

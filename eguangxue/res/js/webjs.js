@@ -41,6 +41,7 @@ JS.shopaddrpage={
 	'init':function(){
 		$('.userinfo .editor a.radio').click(function(){
 			if ($(this).hasClass('sel')) return false;
+			$(this).addClass('sel').parents('.userinfo').siblings().find('a.radio').removeClass('sel');
  		})
 		$('.userinfo .editor a.del').click(function(){
 			$(this).parents('.userinfo').remove();
