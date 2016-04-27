@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0" name="viewport" /> 
+<meta name = "format-detection" content = "telephone=no">
+<head>
+	<title>添加收货地址</title>
+	<link rel="stylesheet" type="text/css" href="res/css/webstyle.css">
+	<script src='res/js/jquery.min.js'></script>
+	<script src='res/js/webjs.js'></script>
+	<script src="res/js/qo.js"></script>
+	<script>
+		$(function(){
+			JS.addaddrpage.init();
+		})
+	</script>
+</head>
+<body>
+	<div class='addaddrpage'>
+		<div class='topbox'>
+			<a class='back' href="javascript:history.back();"></a>
+			<p>添加收货地址</p>
+			<a class='pres' href="javascript:;">保存</a>
+		</div>
+		<div class='nameandtel mes'>
+			<div class='username'>
+				<p>收货人</p>
+				<input type='text' value=''/>
+			</div>
+			<div class='usertel'>
+				<p>手机号</p>
+				<input type='text' value=''/>
+			</div>
+		</div>
+		<div class='useraddr mes'>
+			<div class='area'>
+				<p>所在地区</p>
+				<span></span>
+			</div>
+			<div class='address'>
+				<p>详细地址</p>
+				<textarea></textarea>
+			</div>
+		</div>
+		<div class='gray' onclick='JS.addaddrpage.out()'></div>
+		<div class='hidebox' style='display:none;'>
+			<div class='btnbox'>
+				<a class='away' href="javascript:;" onclick='JS.addaddrpage.out()'>取消</a>
+				<a class='sure' href="javascript:;">确定</a>
+			</div>
+			<div class='localbox'>
+				<ul class='province'>
+					<li><a href="javascript:;">北京市</a></li>
+					<li><a href="javascript:;">上海市</a></li>
+					<li><a href="javascript:;">河南省</a></li>
+					<li><a href="javascript:;">山东省</a></li>
+					<li><a href="javascript:;">江西省</a></li>
+					<li><a href="javascript:;">请选择</a></li>
+					<li><a href="javascript:;">北京市</a></li>
+					<li><a href="javascript:;">上海市</a></li>
+					<li><a href="javascript:;">河南省</a></li>
+					<li><a href="javascript:;">山东省</a></li>
+					<li><a href="javascript:;">江西省</a></li>
+				</ul>
+				<ul class='down' style='display:none;'>
+					<li><a href="javascript:;">周口市</a></li>
+					<li><a href="javascript:;">漯河市</a></li>
+					<li><a href="javascript:;">郑州市</a></li>
+				</ul>
+				<ul class='county' style='display:none;'>
+					<li><a href="javascript:;">郾城区</a></li>
+					<li><a href="javascript:;">召陵区</a></li>
+					<li><a href="javascript:;">源汇区</a></li>
+				</ul>
+				<div class='cle'></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

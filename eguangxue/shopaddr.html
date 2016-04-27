@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0" name="viewport" /> 
+<meta name = "format-detection" content = "telephone=no">
+<head>
+	<title>管理收货地址</title>
+	<link rel="stylesheet" type="text/css" href="res/css/webstyle.css">
+	<script src='res/js/jquery.min.js'></script>
+	<script src='res/js/webjs.js'></script>
+	<script src="res/js/qo.js"></script>
+	<script>
+		$(function(){
+			JS.shopaddrpage.init();
+		})
+	</script>
+</head>
+<body>
+	<div class='shopaddrpage'>
+		<div class='topbox'>
+			<a class='back' href="javascript:history.back();"></a>
+			<p>管理收货地址</p>
+		</div>
+		<div class='userinfobox'>
+			<div class='userinfo'>
+				<p class='name'>李可可<span>13222222222</span></p>
+				<p class='addr'>北京市朝阳区百子湾路后现代城14号楼305</p>
+				<div class='editor'>
+					<a class='radio sel' href="javascript:;"><p><span></span></p>设为默认地址</a>
+					<a class='del' href="javascript:;">删除</a>
+				</div>
+			</div>
+			<div class='userinfo'>
+				<p class='name'>李可可<span>13222222222</span></p>
+				<p class='addr'>北京市朝阳区百子湾路后现代城14号楼305后现代城14号楼305北京市朝阳区百子湾路后现代城14号楼305后现代城14号楼305</p>
+				<div class='editor'>
+					<a class='radio' href="javascript:;"><p><span></span></p>设为默认地址</a>
+					<a class='del' href="javascript:;">删除</a>
+				</div>
+			</div>
+		</div>
+		<div class='addbtn'><a href="addaddr.html">添加收货地址</a></div>
+	</div>
+</body>
+</html>

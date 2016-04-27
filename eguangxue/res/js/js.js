@@ -210,4 +210,21 @@ JS.listsurepage={
 		$('h4 span').html('￥'+allpri);
 	}
 }
+function promp(tiph,tipc){
+	console.log(111)
+	var prompbox="<div class='prompbox' style='z-index:999;width:70%;height:24%;position:fixed;left:15%;top:38%;background:#ffffff;border:1px solid #9a9a9a;'></div>";
+	var gray="<div class='gray' style='z-index:998;width:100%;height:100%;position:fixed;left:0px;top:0px;background:#000000;opacity:0.8;'></div>";
+	var tipcont="<div class='cont' style='margin:50px 10px;font-size:12px;color:#333333;line-height:18px;overflow:hidden;'>"+tipc+"</div>"
+	var tiphead="<div class='tiphead' style='position:absolute;left:0px;top:0px;width:100%;height:40px;border-bottom:1px solid #efeff4'><p style='padding:0px 10px;font-size:12px;color:#000000;line-height:40px;text-align:center;font-weight:bold;'>"+tiph+"</p></div>"
+	var tipsurebtn="<div class='surebox' style='width:100%;height:40px;background:#efeff4;position:absolute;bottom:0px;left:0px;'><a onclick='tiphide()' style='display:block;width:60px;height:30px;margin:5px auto;background:#b81c22;color:#ffffff;text-align:center;line-height:30px;border-radius:5px;'>确定</a></div>"
+	$('body').append(gray);
+	$('body').append(prompbox);
+	$('body .prompbox').append(tiphead);
+	$('body .prompbox').append(tipsurebtn);
+	$('body .prompbox').append(tipcont);
+}
+function tiphide(){
+		$('.prompbox').hide();
+		$('.gray').hide();
+}
 

@@ -488,7 +488,7 @@ a{
 }
 .cartpage .allprice a.cartsub{
 	display: block;
-	width: 50px;
+	width: 70px;
 	height: 32px;
 	margin: 9px 10px;
 	background: #b81c22;
@@ -604,13 +604,13 @@ a{
 }
 .orderlist .list .listbox p.pri span{
 	font-size: 14px;
-	color: #ea7f0d;
+	color: #b81c22;
 }
 .orderlist .list .listbox p.pri a{
 	font-size: 14px;
 	color: #ffffff;
 	text-decoration: none;
-	background: #7cc8ec;
+	background: #b81c22;
 	padding: 2px 15px;
 	border-radius: 3px;
 	position: absolute;

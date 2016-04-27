@@ -1,6 +1,7 @@
 *{
 	margin: 0px;
 	padding: 0px;
+	font-family: '宋体';
 }
 body{
 	background: #efeff4;
@@ -23,6 +24,7 @@ a{
 	position: fixed;
 	left: 0px;
 	top: 0px;
+	z-index: 997;
 }
 .headerbox img{
 	display: block;
@@ -123,11 +125,47 @@ a{
 .footerbox ul li.active a p{
 	color: #b81c22;
 }
+.topbox{
+	width: 100%;
+	height: 50px;
+	background-color: #ffffff;
+	z-index: 990;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+}
+.topbox p{
+	line-height: 50px;
+	font-size: 14px;
+	color: #222222;
+	text-align: center;
+}
+.topbox a.back{
+	display: block;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: url('../images/return.png') no-repeat center;
+	background-size: auto 15px;
+}
+.topbox a.pres{
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	color: #222222;
+	font-size: 14px;
+	position: absolute;
+	right: 20px;
+	top: 0px;
+}
 .scroll {
 	width:100%;
 	position:relative;
 	overflow:hidden;
-	margin-top: 93px;
+	margin-top: 50px;
+	z-index: 10;
 }
 .mod_01 {
 	float:left;
@@ -171,8 +209,8 @@ a{
 }
 .indexpage .specialbox .special{
 	margin-top: 10px;
-	height: 148px;
-	background: #999999;
+	/*height: 148px;*/
+	background: #ffffff;
 }
 .indexpage .specialbox .special a{
 	display: block;
@@ -180,9 +218,38 @@ a{
 	height: 100%;
 	overflow: hidden;
 }
+.indexpage .specialbox .special a p{
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #000000;
+	padding: 0px 200px 0px 30px;
+	position: relative;
+}
+.indexpage .specialbox .special a p em{
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url('../images/yanjing.jpg') center no-repeat;
+	background-size: 15px auto;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.indexpage .specialbox .special a p span{
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	font-size: 12px;
+	color: #333333;
+	position: absolute;
+	right: 10px;
+	top: 0px;
+}
 .indexpage .specialbox .special a img{
 	width: 100%;
-	height: 100%;
+	height: 148px;
 }
 .indexpage .specialbox .special:last-child{
 	margin-bottom: 65px;
@@ -395,4 +462,427 @@ a{
 	color: #ffffff;
 	border: none;
 	letter-spacing:8px;
+}
+.shopaddrpage .topbox{
+	background: url('../images/line.png') bottom repeat-x;
+	background-color: #ffffff;
+	background-size: auto 4px;
+	padding-bottom: 4px;
+}
+.shopaddrpage .userinfobox{
+	margin-top: 55px;
+}
+.shopaddrpage .userinfobox .userinfo{
+	background: #ffffff;
+	padding-top:10px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.shopaddrpage .userinfobox .userinfo p.name{
+	color: #2c2c2c;
+	font-weight: bold;
+	line-height: 20px;
+	font-size: 14px;
+	padding: 0px 20px;
+}
+.shopaddrpage .userinfobox .userinfo p.name span{
+	margin-left: 20px;
+}
+.shopaddrpage .userinfobox .userinfo p.addr{
+	line-height: 18px;
+	max-height: 36px;
+	overflow: hidden;
+	font-size: 12px;
+	color: #9e9e9e;
+	margin-bottom: 10px;
+	padding: 5px 20px 0px 20px;
+	
+}
+.shopaddrpage .userinfobox .userinfo .editor{
+	height: 36px;
+	border-top: 1px dotted #bebebe;
+	position: relative;
+}
+.shopaddrpage .userinfobox .userinfo a.radio{
+	display: block;
+	padding-left: 20px;
+	font-size: 12px;
+	color: #2f2f2f;
+	line-height: 20px;
+	position: absolute;
+	bottom: 8px;
+	left: 20px;
+}
+.shopaddrpage .userinfobox .userinfo a.radio.sel{
+	color: #b81c22;
+}
+.shopaddrpage .userinfobox .userinfo a.radio.sel p{
+	border: 1px solid #b81c22;
+}
+.shopaddrpage .userinfobox .userinfo a.radio.sel p span{
+	background: #b81c22;
+}
+.shopaddrpage .userinfobox .userinfo a.radio p{
+	width: 14px;
+	height: 14px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius: 7px;
+	border: 1px solid #999999;
+	position: absolute;
+	left: 0px;
+	top: 2px;
+	
+}
+.shopaddrpage .userinfobox .userinfo a.radio p span{
+	display: block;
+	width: 5px;
+	height: 5px;
+	margin: 4.5px auto;
+	background: #999999;
+}
+.shopaddrpage .userinfobox .userinfo a.del{
+	display: block;
+	width: 40px;
+	height: 20px;
+	color: #919191;
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+	border: 1px solid #989898;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius: 5px;
+	position: absolute;
+	right: 20px;
+	bottom: 7px;
+}
+.shopaddrpage .addbtn{
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	background: #ffffff;
+	border-top: 1px solid #e7e7e7;
+}
+.shopaddrpage .addbtn a{
+	display: block;
+	width: 100px;
+	height: 30px;
+	font-size: 12px;
+	background: #b81c22;
+	color: #ffffff;
+	text-align: center;
+	line-height: 30px;
+	margin: 10px auto;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius: 5px;
+}
+.addaddrpage .topbox{
+	background: url('../images/line.png') bottom repeat-x;
+	background-color: #ffffff;
+	background-size: auto 4px;
+	padding-bottom: 4px;
+}
+.addaddrpage .mes.nameandtel{
+	margin-top: 69px;
+}
+.addaddrpage .mes{
+	margin-top: 15px;
+	padding-left: 15px;
+	background: #ffffff;
+}
+.addaddrpage .mes>div{
+	height: 50px;
+	padding-left: 70px;
+	border-bottom: 1px solid #e7e7e7;
+	position: relative;
+}
+.addaddrpage .mes>div p{
+	line-height: 50px;
+	font-size: 14px;
+	color: #222222;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.addaddrpage .mes>div input{
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	border: none;
+}
+.addaddrpage .mes>div.area span{
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	line-height: 50px;
+}
+.addaddrpage .mes>div.address{
+	padding: 10px 0px;
+	height: 54px;
+	padding-left: 70px;
+	padding-right: 10px;
+}
+.addaddrpage .mes>div.address p{
+	line-height: 18px;
+	position: absolute;
+	left: 0px;
+	top: 10px;
+}
+.addaddrpage .mes>div.address textarea{
+	width: 100%;
+	height: 54px;
+	line-height: 18px;
+	overflow: scroll;
+	border: none;
+}
+.addaddrpage .hidebox{
+	width: 100%;
+	height: 260px;
+	background: #ffffff;
+	position: fixed;
+	bottom: 0px;
+	bottom: 0px;
+	z-index: 999;
+}
+.addaddrpage .hidebox .btnbox{
+	height: 40px;
+	background: #efeff4;
+	position: relative;
+}
+.addaddrpage .hidebox .btnbox a{
+	display: block;
+	width: 40px;
+	height: 24px;
+	background: #c6c6c6;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius: 5px;
+	font-size: 12px;
+	color: #000000;
+	text-align: center;
+	line-height: 24px;
+}
+.addaddrpage .hidebox .btnbox a.away{
+	position: absolute;
+	left: 10px;
+	top: 8px;
+}
+.addaddrpage .hidebox .btnbox a.sure{
+	position: absolute;
+	right: 10px;
+	top: 8px;
+}
+.addaddrpage .hidebox .localbox{
+	padding: 20px 0px;
+}
+.addaddrpage .hidebox .localbox ul{
+	width: 100%;
+	height: 180px;
+	float: left;
+	list-style-type: none;
+	overflow: scroll;
+}
+.addaddrpage .hidebox .localbox ul li{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-bottom: 1px dotted #efeff4;
+}
+.addaddrpage .hidebox .localbox ul li.sel a{
+	border-bottom: 2px solid #b81c22;
+}
+.addaddrpage .hidebox .localbox ul li a{
+	padding: 8px 0px;
+	font-size: 14px;
+	color: #333333;
+}
+.addaddrpage .gray{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	background: #999999;
+	opacity: 0.8;
+	z-index: 998;
+}
+.myorderpage .itembox{
+	height: 40px;
+	padding-bottom: 2px;
+	margin-top: 55px;
+	margin-bottom: 5px;
+	background: #ffffff;
+}
+.myorderpage .itembox a{
+	display: block;
+	width: 33%;
+	height: 100%;
+	line-height: 40px;
+	font-size: 14px;
+	color: #000000;
+	text-align: center;
+	float: left;
+}
+.myorderpage .itembox a span{
+	
+	padding: 13px;
+}
+.myorderpage .itembox a.sel span{
+	border-bottom: 2px solid #b81c22;
+}
+.myorderpage .itembox a.item2{
+	width: 34%;
+}
+.myorderpage .list{
+	margin-bottom: 60px;
+	
+}
+.myorderpage .list .listbox{
+	background: #ffffff;
+	margin-bottom: 5px;
+	padding: 0px 10px;
+}
+.myorderpage .list .listbox .list_num{
+	width: 100%;
+	height: 34px;
+	line-height: 34px;
+	font-size: 14px;
+	color: #666666;
+	border-bottom: 1px solid #e9ecf1;
+	position: relative;
+}
+.myorderpage .list .listbox .list_num a{
+	position: absolute;
+	right: 20px;
+	font-size: 14px;
+	color: #666666;
+	text-decoration: none;
+}
+.myorderpage .list .listbox .pro{
+	width: 100%;
+	position: relative;
+} 
+.myorderpage .list .listbox .pro a{
+	text-decoration: none;
+}
+.myorderpage .list .listbox .pro img{
+	height: 80px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.myorderpage .list .listbox .pro .pro_p{
+	margin-left: 100px;
+	margin-right: 60px;
+	padding: 10px 0px;
+}
+.myorderpage .list .listbox .pro .pro_p p{
+	height: 40px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #000000;
+
+	overflow: hidden;
+}
+.myorderpage .list .listbox .pro .pro_p .pro_p2{
+	color: #8c8c8c;
+	height: 20px;
+}
+.myorderpage .list .listbox .pro .pro_p p.pro_p1 span{
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+.myorderpage .list .listbox .pro .pro_p p.pro_p2 span{
+	position: absolute;
+	right: 5px;
+	bottom:10px;
+	color: #000000;
+}
+.myorderpage .list .listbox p.pri{
+	border-top: 1px solid #e9ecf1;
+	font-size: 12px;
+	color: #8c8c8c;
+	height: 34px;
+	line-height: 34px;
+	position: relative;
+}
+.myorderpage .list .listbox p.pri span{
+	font-size: 14px;
+	color: #b81c22;
+}
+.myorderpage .list .listbox p.pri a{
+	font-size: 14px;
+	color: #ffffff;
+	text-decoration: none;
+	background: #b81c22;
+	padding: 2px 15px;
+	border-radius: 3px;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	line-height: 20px;
+}
+.myorderpage .nulllist{
+	margin-bottom: 60px;
+}
+.myorderpage .nulllist .nulllistbox{
+	height: 300px;
+	margin: 0px 17px;
+	background: url("res/images/line.png") center repeat-x;
+	background-size: auto 1px;
+}
+.myorderpage .nulllist .nulllistbox .img{
+	width: 80px;
+	margin: 0px auto;
+	padding-top: 120px;
+	background: #e9ecf1;
+}
+.myorderpage .nulllist .nulllistbox .img img{
+	width: 35px;
+	margin: 15px 23px;
+}
+.myorderpage .nulllist .nulllistbox p{
+	text-align: center;
+	font-size: 14px;
+	color: #666666;
+}
+.myorderpage .nulllist p{
+	text-align: center;
+	font-size: 14px;
+	color: #999999;
+}
+.myorderpage .nulllist>a{
+	display: block;
+	width: 138px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	color: #7cc8ec;
+	margin: 20px auto;
+	border: 1px solid #7cc8ec;
+	border-radius: 5px;
+}
+.myorderpage .nulllist .link{
+	width: 174px;
+	margin: 10px auto;
+}
+.myorderpage .nulllist .link a{
+	text-decoration: none;
+	font-size: 14px;
+	color: #999999;
+	margin: 16px 0px;
+	border-right: 1px solid #7f7f80;
+	padding: 0px 14px;
+}
+.myorderpage .nulllist .link a:last-child{
+	border-right:none;
 }

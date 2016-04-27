@@ -37,3 +37,58 @@ JS.loginpage={
 	'init':function(){
 	}
 }
+JS.shopaddrpage={
+	'init':function(){
+		$('.userinfo .editor a.radio').click(function(){
+			if ($(this).hasClass('sel')) return false;
+ 		})
+		$('.userinfo .editor a.del').click(function(){
+			$(this).parents('.userinfo').remove();
+		})
+	}
+}
+JS.addaddrpage={
+	'out':function(){
+		$('.gray').hide();
+		$('.hidebox').hide();
+	},
+	'init':function(){
+		$('.useraddr .area').click(function(){
+			$('.hidebox').show();
+			$('.gray').show();
+		})
+		$('.hidebox .localbox ul.province li').click(function(){
+			if ($(this).hasClass('sel')) return false;
+			$(this).addClass('sel').siblings().removeClass('sel');
+			$(this).parent().css('width','33%');
+			$('ul.province li').css('border-right','1px dotted #efeff4');
+			$('ul.down').css({'display':'block','width':'67%'})
+			$('ul.county').hide();
+		})
+		$('.hidebox .localbox ul.down li').click(function(){
+			if ($(this).hasClass('sel')) return false;
+			$(this).addClass('sel').siblings().removeClass('sel');
+			$(this).parent().css('width','33%');
+			$('ul.down li').css('border-right','1px dotted #efeff4');
+			$('ul.county').css({'display':'block','width':'34%'})
+		})
+		$('.hidebox .localbox ul.county li').click(function(){
+			if ($(this).hasClass('sel')) return false;
+			$(this).addClass('sel').siblings().removeClass('sel');
+		})
+		$('.hidebox .btnbox a.sure').click(function(){
+			if ($('ul.county li').hasClass('sel')) {
+				var result='';
+			var aaa=$('.hidebox .localbox ul li.sel a');
+			$.each(aaa,function(i,e){
+				result+=$(e).html()+' ';
+			})
+			$('.useraddr .area span').html(result);
+			JS.addaddrpage.out();
+		}else{
+			return false;
+		}
+			
+		})
+	}
+}
