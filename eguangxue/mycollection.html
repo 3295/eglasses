@@ -20,7 +20,11 @@
 			<div class='topbox'>
 				<a class='back' href="javascript:history.back();"></a>
 				<p>我的收藏</p>
-				<a class='pres' href="javascript:;" onclick='JS.mycollection.show();'>编辑</a>
+				<a class='pres' href="javascript:;" onclick='JS.mycollection.show(this);'>编辑</a>
+			</div>
+			<div class='topbox hide' style='display:none;'>
+				<p>编辑商品收藏</p>
+				<a class='pres' href="javascript:;" onclick='JS.mycollection.hide(this);'>完成</a>
 			</div>
 			<ul>
 				<li>

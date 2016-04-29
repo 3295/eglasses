@@ -222,7 +222,7 @@ a{
 }
 .prolistpage ul li a{
 	display: block;
-	margin: 4px;
+	margin: 3px;
 	background: #ffffff;
 }
 .prolistpage ul li a .img{
@@ -243,7 +243,7 @@ a{
 }
 .prolistpage ul li a p.pri{
 	font-size: 13px;
-	color: #ea7f0d;
+	color: #b81c22;
 	padding: 8px 5px;
 	position: relative;
 }
@@ -254,7 +254,7 @@ a{
 	color: #888888;
 	position: absolute;
 	right: 0px;
-	top: 8Uncaught SyntaxError: Unexpected identifierpx;
+	top: 8px;
 	text-decoration: line-through;
 }
 .cartpage{
@@ -283,13 +283,9 @@ a{
 	height: 30px;
 	text-align: center;
 	line-height: 30px;
-	/*-moz-border-radius:8px;
-	-webkit-border-radius:8px;
-	border-radius: 8px;*/
 	font-size: 16px;
 	color: #000000;
 	font-weight: bold;
-/*	background: #b81c22;*/
 	position: absolute;
 	right: 20px;
 	bottom: 5px;

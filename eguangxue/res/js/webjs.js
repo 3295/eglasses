@@ -147,10 +147,15 @@ JS.mycollection={
 	'init':function(){
 		
 	},
-	'show':function(){
+	'show':function(m){
+		$(m).parent().hide().siblings('.topbox.hide').show();
 		$('.mycollectionpage ul li .grabox').width($('.mycollectionpage ul li a').width());
 		$('.mycollectionpage ul li .grabox').height($('.mycollectionpage ul li a').height());
 		$('.mycollectionpage ul li .grabox').show();
+	},
+	'hide':function(m){
+		$(m).parent().hide().siblings('.topbox').show();
+		$('.mycollectionpage ul li .grabox').hide();
 	},
 	'del':function(m){
 		$(m).parents('li').remove();

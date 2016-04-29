@@ -158,7 +158,7 @@ JS.prodetailspage={
 			image     : img,
 			frameTime : 120
 		});
-		$("#rotatebox").css({'background-image':img,'background-size':W*8+'px auto'});
+		$("#rotatebox").css({'background-image':img,'background-size':W*8+'px auto','background-color':'#ffffff'});
 		
 		$(".prodetails .size ul li").click(function(){
 			$(this).attr('class','sel').siblings().removeClass("sel");
