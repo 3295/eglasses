@@ -677,13 +677,21 @@ a{
 }
 .listsure .addbox a{
 	display: block;
-	background-image: url("../images/open.png");
-	background-repeat: no-repeat;
-	background-size: auto 15px;
-	background-position: right 10px center;
 	margin:5px 0px;
 	padding: 6px 30px 10px 10px;
 	position: relative;
+}
+.listsure .addbox a>span{
+	display: block;
+	width: 30px;
+	height: 100%;
+	background-image: url("../images/open.png");
+	background-repeat: no-repeat;
+	background-size: auto 15px;
+	background-position: center;
+	position: absolute;
+	right: 0px;
+	top: 0px;
 }
 .listsure .addbox a.add{
 	display: none;

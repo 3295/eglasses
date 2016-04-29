@@ -9,11 +9,6 @@
 	<script src='res/js/jquery.min.js'></script>
 	<script src='res/js/webjs.js'></script>
 	<script src="res/js/qo.js"></script>
-	<script>
-		$(function(){
-			JS.shopaddrpage.init();
-		})
-	</script>
 </head>
 <body>
 	<div class='shopaddrpage'>
@@ -26,16 +21,16 @@
 				<p class='name'>李可可<span>13222222222</span></p>
 				<p class='addr'>北京市朝阳区百子湾路后现代城14号楼305</p>
 				<div class='editor'>
-					<a class='radio sel' href="javascript:;"><p><span></span></p>设为默认地址</a>
-					<a class='del' href="javascript:;">删除</a>
+					<a class='radio sel' href="javascript:;" onclick='JS.shopaddrpage.radio(this)'><p><span></span></p>设为默认地址</a>
+					<a class='del' href="javascript:;" onclick='JS.shopaddrpage.del(this)'>删除</a>
 				</div>
 			</div>
 			<div class='userinfo'>
 				<p class='name'>李可可<span>13222222222</span></p>
 				<p class='addr'>北京市朝阳区百子湾路后现代城14号楼305后现代城14号楼305北京市朝阳区百子湾路后现代城14号楼305后现代城14号楼305</p>
 				<div class='editor'>
-					<a class='radio' href="javascript:;"><p><span></span></p>设为默认地址</a>
-					<a class='del' href="javascript:;">删除</a>
+					<a class='radio' href="javascript:;" onclick='JS.shopaddrpage.radio(this)'><p><span></span></p>设为默认地址</a>
+					<a class='del' href="javascript:;" onclick='JS.shopaddrpage.del(this)'>删除</a>
 				</div>
 			</div>
 		</div>

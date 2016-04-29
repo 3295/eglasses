@@ -61,8 +61,11 @@ a{
 .footerbox ul li{
 	list-style-type: none;
 	float: left;
-	width: 25%;
+	width: 33%;
 	height: 100%;
+}
+.footerbox ul li.bar2{
+	width: 34%;
 }
 .footerbox ul li a{
 	display: block;
@@ -75,7 +78,7 @@ a{
 	height: 27px;
 	margin: 6px auto;
 	background: url('../images/bar.png') no-repeat;
-	background-size: 132px 54px;
+	background-size: 99px 54px;
 }
 .footerbox ul li a p{
 	font-size: 13px;
@@ -92,9 +95,6 @@ a{
 .footerbox ul li.bar3 a span{
 	background-position: -66px 0px;
 }
-.footerbox ul li.bar4 a span{
-	background-position: -99px 0px;
-}
 .footerbox ul li.bar1:active a span{
 	background-position: 0px -27px;
 }
@@ -103,9 +103,6 @@ a{
 }
 .footerbox ul li.bar3:active a span{
 	background-position: -66px -27px;
-}
-.footerbox ul li.bar4:active a span{
-	background-position: -99px -27px;
 }
 .footerbox ul li:active a p{
 	color: #b81c22;
@@ -118,9 +115,6 @@ a{
 }
 .footerbox ul li.bar3.active a span{
 	background-position: -66px -27px;
-}
-.footerbox ul li.bar4.active a span{
-	background-position: -99px -27px;
 }
 .footerbox ul li.active a p{
 	color: #b81c22;
@@ -155,7 +149,8 @@ a{
 	height: 50px;
 	line-height: 50px;
 	color: #222222;
-	font-size: 14px;
+	font-size: 13px;
+	text-decoration: underline;
 	position: absolute;
 	right: 20px;
 	top: 0px;
@@ -223,7 +218,7 @@ a{
 	line-height: 30px;
 	font-size: 14px;
 	color: #000000;
-	padding: 0px 200px 0px 30px;
+	padding: 0px 170px 0px 30px;
 	position: relative;
 }
 .indexpage .specialbox .special a p em{
@@ -418,7 +413,7 @@ a{
 }
 .loginpage form p{
 	background: #ffffff;
-	height: 35px;
+	height: 40px;
 	padding-left: 80px;
 	padding-right: 120px;
 	position: relative;
@@ -433,19 +428,19 @@ a{
 	border: none;
 }
 .loginpage form p span{
-	font-size: 12px;
+	font-size: 14px;
 	color: #000000;
-	line-height: 35px;
+	line-height: 40px;
 	position: absolute;
 	left: 20px;
 	top: 0px;
 }
-.loginpage form p.username input.btn{
+.loginpage form p.username a.btn{
 	display: block;
 	width: 90px;
-	height: 25px;
+	height: 30px;
 	text-align: center;
-	line-height: 25px;
+	line-height: 30px;
 	position: absolute;
 	right: 20px;
 	top: 5px;
@@ -453,15 +448,18 @@ a{
 	background: #b81c22;
 	color: #ffffff;
 }
-.loginpage form input.sub{
+.loginpage form a.sub{
 	display: block;
 	width: 200px;
-	height: 30px;
+	height: 40px;
 	margin: 40px auto;
 	background: #b81c22;
 	color: #ffffff;
 	border: none;
 	letter-spacing:8px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
 }
 .shopaddrpage .topbox{
 	background: url('../images/line.png') bottom repeat-x;
@@ -712,35 +710,8 @@ a{
 	opacity: 0.8;
 	z-index: 998;
 }
-.myorderpage .itembox{
-	height: 40px;
-	padding-bottom: 2px;
-	margin-top: 55px;
-	margin-bottom: 5px;
-	background: #ffffff;
-}
-.myorderpage .itembox a{
-	display: block;
-	width: 33%;
-	height: 100%;
-	line-height: 40px;
-	font-size: 14px;
-	color: #000000;
-	text-align: center;
-	float: left;
-}
-.myorderpage .itembox a span{
-	
-	padding: 13px;
-}
-.myorderpage .itembox a.sel span{
-	border-bottom: 2px solid #b81c22;
-}
-.myorderpage .itembox a.item2{
-	width: 34%;
-}
 .myorderpage .list{
-	margin-bottom: 60px;
+	margin-top: 55px;
 	
 }
 .myorderpage .list .listbox{
@@ -887,7 +858,276 @@ a{
 	border-right:none;
 }
 .orderdetailspage .anarchy{
-	margin-top: 50px;
+	margin-top: 55px;
+	margin-bottom: 5px;
 	height: 100px;
-	background: #b81c22;
+	background: #ffffff;
+}
+.orderdetailspage .anarchy p{
+	padding: 0px 20px 0px 110px;
+	line-height: 100px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #000000;
+	position: relative;
+}
+.orderdetailspage .anarchy p span{
+	display: block;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: url('../images/ok.png') no-repeat center;
+	background-size: auto 40px;
+}
+.orderdetailspage .anarchy p.no span{
+	background: url('../images/no.png') no-repeat center;
+	background-size: auto 40px;
+}
+.orderdetailspage .useradd{
+	background: #ffffff;
+	margin-bottom: 5px;
+	padding: 6px 10px 10px 40px;
+	position: relative;
+}
+.orderdetailspage .useradd p.name{
+	height: 25px;
+	line-height: 25px;
+	font-size: 13px;
+	color: #333333;
+	padding-right: 150px;
+	position: relative;
+}
+.orderdetailspage .useradd p.name span{
+	position: absolute;
+	right: 60px;
+	top: 0px;
+}
+.orderdetailspage .useradd p.address{
+	font-size: 12px;
+	line-height: 15px;
+	color: #333333;
+	position: relative;
+}
+.orderdetailspage .useradd p.address em{
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url('../images/map.png') center no-repeat;
+	background-size: auto 25px;
+	position: absolute;
+	left: -35px;
+	top: -15px;
+}
+.orderdetailspage .listbox{
+	background: #ffffff;
+	margin-bottom: 5px;
+	padding: 0px 10px;
+}
+.orderdetailspage .listbox .list_num{
+	width: 100%;
+	height: 34px;
+	line-height: 34px;
+	font-size: 14px;
+	color: #666666;
+	border-bottom: 1px solid #e9ecf1;
+}
+.orderdetailspage .listbox .pro{
+	width: 100%;
+	position: relative;
+} 
+.orderdetailspage .listbox .pro a{
+	display: block;
+}
+.orderdetailspage .listbox .pro img{
+	height: 80px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.orderdetailspage .listbox .pro .pro_p{
+	margin-left: 100px;
+	margin-right: 60px;
+	padding: 10px 0px;
+}
+.orderdetailspage .listbox .pro .pro_p p{
+	height: 40px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #000000;
+
+	overflow: hidden;
+}
+.orderdetailspage .listbox .pro .pro_p .pro_p2{
+	color: #8c8c8c;
+	height: 20px;
+}
+.orderdetailspage .listbox .pro .pro_p p.pro_p1 span{
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+.orderdetailspage .listbox .pro .pro_p p.pro_p2 span{
+	position: absolute;
+	right: 5px;
+	bottom:10px;
+	color: #000000;
+}
+.orderdetailspage .listbox p.pri{
+	border-top: 1px solid #e9ecf1;
+	font-size: 12px;
+	color: #8c8c8c;
+	height: 34px;
+	line-height: 34px;
+	position: relative;
+}
+.orderdetailspage .listbox p.pri span{
+	font-size: 14px;
+	color: #b81c22;
+}
+.orderdetailspage .timebox{
+	padding: 6px 10px;
+	background: #ffffff;
+}
+.orderdetailspage .timebox p{
+	font-size: 12px;
+	line-height: 20px;
+	color: #666666;
+}
+.personalcenter .membershipsbox{
+	margin-top: 50px;
+	height: 150px;
+	background: #000000;
+}
+.personalcenter .orderbox{
+	height: 60px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background: #ffffff;
+}
+.personalcenter .orderbox a{
+	display: block;
+	width: 33%;
+	height: 100%;
+	color: #585c64;
+	text-align: center;
+	float: left;
+}
+.personalcenter .orderbox a span{
+	display: block;
+	width: 100%;
+	height: 40px;
+}
+.personalcenter .orderbox a span img{
+	height: 20px;
+	margin: 10px auto;
+}
+.personalcenter .orderbox a p{
+	font-size: 12px;
+}
+
+.personalcenter .orderbox a.item2{
+	width: 34%;
+}
+.personalcenter .accountandabout{
+	padding-left:10px;
+	background: #ffffff;
+}
+.personalcenter .accountandabout a{
+	display:block;
+	height: 40px;
+	line-height: 40px;
+	color: #222222;
+	font-size: 13px;
+	border-bottom: 1px solid #efeff4;
+	position: relative;
+}
+.personalcenter .accountandabout a:last-child{
+	border-bottom: none;
+}
+.personalcenter .accountandabout a span{
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url('../images/open.png') center no-repeat;
+	background-size: auto 15px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+.personalcenter .aboutusbox{
+	margin-top: 5px;
+}
+.mycollectionpage ul{
+	margin-top: 50px;
+}
+.mycollectionpage ul li{
+	width: 50%;
+	float: left;
+	list-style-type: none;
+	position: relative;
+}
+.mycollectionpage ul li a{
+	display: block;
+	margin: 10px;
+	background: #ffffff;
+}
+.mycollectionpage ul li a .img{
+	width: 100%;
+}
+.mycollectionpage ul li a img{
+	width: 100%;
+	height: 100%;
+}
+.mycollectionpage ul li a p.pron{
+	font-size: 12px;
+	line-height: 18px;
+	height: 36px;
+	overflow: hidden;
+	color: #000000;
+	margin-top: 10px;
+	padding: 0px 5px;
+}
+.mycollectionpage ul li a p.pri{
+	font-size: 13px;
+	color: #b81c22;
+	padding: 8px 5px;
+	position: relative;
+}
+.mycollectionpage ul li a p.pri span{
+	width: 60px;
+	height: 30px;
+	font-size: 12px;
+	color: #888888;
+	position: absolute;
+	right: 0px;
+	top: 8px;
+	text-decoration: line-through;
+}
+.mycollectionpage ul li .grabox{
+	display: none;
+	z-index: 998;
+	background: #999999;
+	opacity: 0.8;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+.mycollectionpage ul li .grabox a{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: #ffffff;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius: 12px;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 24px;
+	color: #999999;
+	font-weight: bold;
 }
