@@ -90,6 +90,11 @@ JS.prolistpage = {
 		        });
 		    }
 		});
+	},
+	'topscroll':function(m){
+		console.log($('.inner ul.probox').scrollTop())
+        $('.inner ul.probox').scrollTop(0);
+        
 	}
 };
 JS.cartpage={

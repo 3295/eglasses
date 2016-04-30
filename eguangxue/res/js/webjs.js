@@ -96,8 +96,6 @@ JS.addaddrpage={
 	'province':function(M){
 		if ($(M).parent("li").hasClass('sel')) return false;
 		$(M).parent("li").addClass("sel").siblings().removeClass("sel");
-		
-		
 		$(M).parents("ul.province").css('width','33%');
 		$('ul.province li').css('border-right','1px dotted #efeff4');
 		$('ul.down').css({'display':'block','width':'67%'})
