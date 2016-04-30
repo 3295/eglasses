@@ -897,11 +897,15 @@ a{
 	margin-bottom: 5px;
 	position: relative;
 }
-.listsure .yanguang p{
+.listsure .yanguang a{
+	display: block;
+}
+.listsure .yanguang a p{
 	font-size: 13px;
 	line-height: 30px;
+	color: #333333;
 }
-.listsure .yanguang a{
+.listsure .yanguang a span{
 	display: block;
 	width: 20px;
 	height: 20px;
@@ -911,6 +915,9 @@ a{
 	position: absolute;
 	right: 10px;
 	top: 5px;
+}
+.listsure .yanguang a.sel span{
+	background-position: 0px -20px;
 }
 .listsure .input{
 	background: #ffffff;
