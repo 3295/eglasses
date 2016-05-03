@@ -92,8 +92,7 @@ JS.prolistpage = {
 		});
 	},
 	'topscroll':function(m){
-		console.log($('.inner ul.probox').scrollTop())
-        $('.inner ul.probox').scrollTop(0);
+        $('.inner').scrollTop(0);
         
 	}
 };
@@ -213,13 +212,16 @@ JS.listsurepage={
 		var pro_pri=$('.listsure .pro .pro_intro .pro_pri');
 		var allpri=parseFloat($(pro_pri).find('span b').text())*parseInt($(pro_pri).find('.count input').val());
 		$('h4 span').html('￥'+allpri);
+	},
+	'yesorno':function(m){
+		if ($(m).hasClass('sel')) {$(m).removeClass('sel')}else{$(m).addClass('sel')}
 	}
 }
 function promp(tiph,tipc){
 	console.log(111)
 	var prompbox="<div class='prompbox' style='z-index:999;width:70%;height:24%;position:fixed;left:15%;top:38%;background:#ffffff;border:1px solid #9a9a9a;'></div>";
 	var gray="<div class='gray' style='z-index:998;width:100%;height:100%;position:fixed;left:0px;top:0px;background:#000000;opacity:0.8;'></div>";
-	var tipcont="<div class='cont' style='margin:50px 10px;font-size:12px;color:#333333;line-height:18px;overflow:hidden;'>"+tipc+"</div>"
+	var tipcont="<div class='cont' style='margin:50px 10px;font-size:12px;color:#333333;line-height:18px;overflow:hidden;text-align:center;'>"+tipc+"</div>"
 	var tiphead="<div class='tiphead' style='position:absolute;left:0px;top:0px;width:100%;height:40px;border-bottom:1px solid #efeff4'><p style='padding:0px 10px;font-size:12px;color:#000000;line-height:40px;text-align:center;font-weight:bold;'>"+tiph+"</p></div>"
 	var tipsurebtn="<div class='surebox' style='width:100%;height:40px;background:#efeff4;position:absolute;bottom:0px;left:0px;'><a onclick='tiphide()' style='display:block;width:60px;height:30px;margin:5px auto;background:#b81c22;color:#ffffff;text-align:center;line-height:30px;border-radius:5px;'>确定</a></div>"
 	$('body').append(gray);

@@ -263,9 +263,12 @@ a{
 	-webkit-border-radius:15px;
 	-moz-border-radius:15px;
 	border-radius: 15px;
-	background: #b81c22;
+	
+	background: url('../images/up.png') center no-repeat;
+	background-size: auto 15px;
+	background-color: #b81c22;
 	position: fixed;
-	bottom: 15%;
+	bottom: 10%;
 	right: 20px;
 }
 .cartpage{
@@ -296,7 +299,6 @@ a{
 	line-height: 30px;
 	font-size: 16px;
 	color: #000000;
-	font-weight: bold;
 	position: absolute;
 	right: 20px;
 	bottom: 5px;
@@ -902,7 +904,7 @@ a{
 }
 .listsure .yanguang a p{
 	font-size: 13px;
-	line-height: 30px;
+	line-height: 36px;
 	color: #333333;
 }
 .listsure .yanguang a span{
@@ -914,7 +916,7 @@ a{
 	background-position: 0px 0px;
 	position: absolute;
 	right: 10px;
-	top: 5px;
+	top: 8px;
 }
 .listsure .yanguang a.sel span{
 	background-position: 0px -20px;
@@ -1068,9 +1070,6 @@ a{
 .prodetails .size ul li.sel a{
 	border: 1px solid #b81c22;
 	color: #b81c22;
-}
-.prodetails .trans{
-	height: 34px;
 }
 .prodetails .trans p{
 	line-height: 34px;
