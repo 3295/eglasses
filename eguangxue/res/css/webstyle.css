@@ -790,36 +790,34 @@ a{
 	top: 5px;
 	line-height: 20px;
 }
-.myorderpage .nulllist{
+.nulllist{
 	margin-bottom: 60px;
 }
-.myorderpage .nulllist .nulllistbox{
+.nulllist .nulllistbox{
 	height: 300px;
 	margin: 0px 17px;
 	background: url("res/images/line.png") center repeat-x;
 	background-size: auto 1px;
 }
-.myorderpage .nulllist .nulllistbox .img{
+.nulllist .nulllistbox .img{
 	width: 80px;
-	margin: 0px auto;
+	margin: 20px auto;
 	padding-top: 120px;
-	background: #e9ecf1;
 }
-.myorderpage .nulllist .nulllistbox .img img{
-	width: 35px;
-	margin: 15px 23px;
+.nulllist .nulllistbox .img img{
+	width: 100%;
 }
-.myorderpage .nulllist .nulllistbox p{
+.nulllist .nulllistbox p{
 	text-align: center;
 	font-size: 14px;
 	color: #666666;
 }
-.myorderpage .nulllist p{
+.nulllist p{
 	text-align: center;
 	font-size: 14px;
 	color: #999999;
 }
-.myorderpage .nulllist>a{
+.nulllist>a{
 	display: block;
 	width: 138px;
 	height: 30px;
@@ -827,16 +825,16 @@ a{
 	text-align: center;
 	text-decoration: none;
 	font-size: 16px;
-	color: #7cc8ec;
+	color: #b81c22;
 	margin: 20px auto;
-	border: 1px solid #7cc8ec;
+	border: 1px solid #b81c22;
 	border-radius: 5px;
 }
-.myorderpage .nulllist .link{
-	width: 174px;
+.nulllist .link{
+	width: 180px;
 	margin: 10px auto;
 }
-.myorderpage .nulllist .link a{
+.nulllist .link a{
 	text-decoration: none;
 	font-size: 14px;
 	color: #999999;
@@ -844,7 +842,7 @@ a{
 	border-right: 1px solid #7f7f80;
 	padding: 0px 14px;
 }
-.myorderpage .nulllist .link a:last-child{
+.nulllist .link a:last-child{
 	border-right:none;
 }
 .orderdetailspage .anarchy{
@@ -946,7 +944,6 @@ a{
 	line-height: 20px;
 	font-size: 12px;
 	color: #000000;
-
 	overflow: hidden;
 }
 .orderdetailspage .listbox .pro .pro_p .pro_p2{
@@ -1039,7 +1036,6 @@ a{
 .personalcenter .orderbox a p{
 	font-size: 12px;
 }
-
 .personalcenter .orderbox a.item2{
 	width: 34%;
 }
@@ -1052,12 +1048,21 @@ a{
 	height: 45px;
 	line-height: 45px;
 	color: #222222;
-	font-size: 13px;
+	font-size: 14px;
+	padding-left: 35px;
+	padding-right: 45px;
 	border-bottom: 1px solid #efeff4;
 	position: relative;
 }
 .personalcenter .accountandabout a:last-child{
 	border-bottom: none;
+}
+.personalcenter .accountandabout a img{
+	display: block;
+	height: 25px;
+	position: absolute;
+	left: 0px;
+	top: 10px;
 }
 .personalcenter .accountandabout a span{
 	display: block;
@@ -1192,4 +1197,10 @@ a{
 }
 .myappointment .appointmentbox .appointment p.sel span{
 	color: #b81c22;
+}
+.aboutuspage .imgbox{
+	margin-top: 50px;
+}
+.aboutuspage .imgbox img{
+	width: 100%;
 }

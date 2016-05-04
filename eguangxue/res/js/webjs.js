@@ -97,9 +97,6 @@ JS.addaddrpage={
 	
 };
 JS.mycollection={
-	'init':function(){
-		
-	},
 	'show':function(m){
 		$(m).parent().hide().siblings('.topbox.hide').show();
 		$('.mycollectionpage ul li .grabox').width($('.mycollectionpage ul li a').width());

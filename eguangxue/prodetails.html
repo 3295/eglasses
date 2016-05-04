@@ -6,36 +6,94 @@
 <head>
 	<title>商品详情</title>
 	<link rel="stylesheet" type="text/css" href="res/css/style.css">
+	<link rel="stylesheet" type="text/css" href="res/css/swiper.min.css">
 	<script type="text/javascript" src="res/js/jquery.min.js"></script>
 	<script type="text/javascript" src="res/js/qo.js"></script>
 	<script type="text/javascript" src="res/js/js.js"></script>
-	<script type="text/javascript" src="res/js/jquery.spritespin.js"></script>
+	<script type="text/javascript" src="res/js/swiper.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
-			var img=$("#rotateimg").val();
-			JS.prodetailspage.init(img);
-			$(".prodetails .pron a").click(function(){
-				if($(this).hasClass("act")){
-					$(this).removeClass("act");
-				}else{
-					$(this).addClass("act");
-				}
+			// var img=$("#rotateimg").val();
+			//JS.prodetailspage.init(img);
+			JS.prodetailspage.init();
+			var swiper = new Swiper('.swiper-container', {
+			    pagination: '.swiper-pagination',
+			    paginationClickable: true
 			});
+			var s_img=$('.swiper-container .swiper-wrapper .swiper-slide');
+			s_img.height(s_img.width()*0.8);
+			$(".prodetails .swiper-container").click(function(){
+				if ($(this).hasClass("cli")) {
+					$(this).removeClass("cli");
+					$(this).find('.swiper-slide').css({'margin-top':"0px"});
+				}else{
+					$(this).addClass("cli");	
+					var H=($(this).height()-s_img.height())/2;
+					$(this).find('.swiper-slide').css({'margin-top':H+"px"});
+				}
+		})
 		});
 	</script>
+	<style>
+		.swiper-container{
+		        width: 100%;
+		        overflow: hidden;
+		        border-bottom: 1px solid #dadee5;
+		        background: #ffffff;
+		}
+		.swiper-container.cli{
+			z-index:990;
+			position:fixed;
+			left:0px;
+			top:0px;
+			width: 100%;
+			height:100%;
+			background:#555555;
+		}
+		.swiper-slide {
+				height: 80%;
+				
+		        display: -webkit-box;
+		        display: -ms-flexbox;
+		        display: -webkit-flex;
+		        display: flex;
+		        -webkit-box-pack: center;
+		        -ms-flex-pack: center;
+		        -webkit-justify-content: center;
+		        justify-content: center;
+		        -webkit-box-align: center;
+		        -ms-flex-align: center;
+		        -webkit-align-items: center;
+		        align-items: center;
+		        overflow: hidden;
+
+		}
+		.swiper-container .swiper-slide img{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
 </head>
 <body>
 	<div class="prodetails">
 		<a class="retu" href="#here" onclick="javascript:history.back();return false"></a>
-		<div id="rotatebox" unselectable="on"></div>
-		<!-- 隐藏域用于承载旋转产品图 -->
-		<input id="rotateimg" type="hidden" value="res/images/2912.jpg">
+	<!-- 	<div id="rotatebox" unselectable="on"></div>
+		隐藏域用于承载旋转产品图
+		<input id="rotateimg" type="hidden" value="res/images/2912.jpg"> -->
+		<div class="swiper-container">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide"><img src="res/images/1.jpg"></div>
+	            <div class="swiper-slide"><img src="res/images/2.jpg"></div>
+	            <div class="swiper-slide"><img src="res/images/1.jpg"></div>
+	        </div>
+	        <div class="swiper-pagination"></div>
+	    </div>
 		<div class="pron">
 			<div class="proname">
 				<p class="name">OAKLEY运动骑行近视光学镜架8033</p>
 				<p class="pri">￥<span>899</span><s>￥1190</s></p>
 			</div>
-			<a href="javascript:;"><span></span><p>收藏</p></a>
+			<a href="javascript:;" onclick='JS.prodetailspage.shoucang(this)'><span></span><p>收藏</p></a>
 		</div>
 		<div class="size box">
 			<p>请选择规格</p>
@@ -116,9 +174,6 @@
 				<li><a class='join' href="javascript:;">加入购物车</a></li>
 				<li><a class="shop" href="listsure.html">立即下单</a></li>
 			</ul>
-			
-			
-			
 		</div>
 	</div>
 </body>

@@ -152,18 +152,17 @@ JS.cartpage={
 };
 JS.prodetailspage={
 	'init':function(img){
-		var price,present_price;
-		var W=$("body").width();
-        var H = 437*W/640; 
-		$("#rotatebox").spritespin({
-			width     : W,
-			height    : H,
-			frames    : 8,
-			image     : img,
-			frameTime : 120
-		});
-		$("#rotatebox").css({'background-image':img,'background-size':W*8+'px auto','background-color':'#ffffff'});
-		
+		// var price,present_price;
+		// var W=$("body").width();
+  		//var H = 437*W/640; 
+		// $("#rotatebox").spritespin({
+		// 	width     : W,
+		// 	height    : H,
+		// 	frames    : 8,
+		// 	image     : img,
+		// 	frameTime : 120
+		// });
+		// $("#rotatebox").css({'background-image':img,'background-size':W*8+'px auto','background-color':'#ffffff'});
 		$(".prodetails .size ul li").click(function(){
 			$(this).attr('class','sel').siblings().removeClass("sel");
 			var price=($(this).find('input')[0]).value;
@@ -188,6 +187,13 @@ JS.prodetailspage={
 				$(this).addClass("sel").siblings("p").show();
 			}
 		})
+	},
+	'shoucang':function(a){
+		if($(a).hasClass("act")){
+			$(a).removeClass("act");
+		}else{
+			$(a).addClass("act");
+		}
 	}
 };
 JS.listsurepage={

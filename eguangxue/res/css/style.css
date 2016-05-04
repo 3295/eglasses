@@ -716,6 +716,16 @@ a{
 	background-color: #ffffff;
 	padding-left: 30px;
 }
+.listsure .addbox a.useradd em{
+	display: block;
+	width: 30px;
+	height: 70px;
+	background: url('../images/map.png') center no-repeat;
+	background-size: auto 25px;
+	position: absolute;
+	left: -20px;
+	top: 0px;
+}
 .listsure .addbox a.useradd p.name{
 	height: 25px;
 	line-height: 25px;
@@ -734,18 +744,8 @@ a{
 	line-height: 15px;
 	color: #333333;
 	height: 30px;
-	/*overflow: hidden;*/
+	overflow: hidden;
 	position: relative;
-}
-.listsure .addbox a.useradd p.address em{
-	display: block;
-	width: 30px;
-	height: 30px;
-	background: url('../images/map.png') center no-repeat;
-	background-size: auto 25px;
-	position: absolute;
-	left: -35px;
-	top: -15px;
 }
 .listsure .paymentbox{
 	background: #ffffff;
@@ -987,7 +987,7 @@ a{
 	position: fixed;
 	left: 12px;
 	top: 12px;
-	z-index: 1;
+	z-index: 2;
 }
 .prodetails #rotate{
 	overflow: hidden;
