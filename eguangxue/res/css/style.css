@@ -390,14 +390,16 @@ a{
 }
 .cartpage .pro .size{
 	display: block;
-	width: 60px;
 	height:20px;
+	padding-right: 85px;
+	line-height: 20px;
+	overflow: hidden;
 	position: absolute;
-	left: 80px;
+	left: 110px;
 	top: 50px;
 	color: #999999;
 	font-size: 12px;
-	text-align: right;
+	text-align: left;
 }
 .cartpage .pro .count{
 	display: block;

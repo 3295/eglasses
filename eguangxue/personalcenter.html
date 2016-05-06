@@ -6,6 +6,8 @@
 <head>
 	<title>个人中心</title>
 	<link rel="stylesheet" type="text/css" href="res/css/webstyle.css">
+	<script src='res/js/jquery.min.js'></script>
+	<script src='res/js/webjs.js'></script>
 </head>
 <body>
 	<div class='personalcenter'>
@@ -14,7 +16,14 @@
 			<p>个人中心</p>
 		</div>
 		<div class='membershipsbox'>
-			<div class='headimg'><img src='res/images/1.jpg'/></div>
+			<div class='headimg'>
+				<img src='res/images/headde.jpg'/>
+				<input type='file' onchange='JS.personalcenter.upload_change($(this))'>
+			</div>
+			<!-- <div class='schi'>
+				<p>上传头像</p>
+				<input type='file'>
+			</div> -->
 			<a href="login.html"><p>登录</p></a>
 		</div>
 		<div class='orderbox'>

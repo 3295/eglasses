@@ -28,8 +28,8 @@ a{
 }
 .headerbox img{
 	display: block;
-	height: 16px;
-	margin: 17px auto;
+	height: 12px;
+	margin: 19px auto;
 }
 .headerbox a.search{
 	width: 50px;
@@ -57,6 +57,7 @@ a{
 	bottom: 0px;
 	background: #ffffff;
 	border-top: 1px solid #d2d2d2;
+	z-index: 997;
 }
 .footerbox ul li{
 	list-style-type: none;
@@ -309,6 +310,7 @@ a{
 	text-align: right;
 	color: #000000;
 	font-size: 14px;
+	z-index: 100;
 }
 .appointmentpage form div.sex a{
 	display: block;
@@ -353,6 +355,42 @@ a{
 }
 .appointmentpage form div.sex a.sel span em{
 	background: #b81c22;
+}
+.appointmentpage form div.city{
+	position: relative;
+}
+.appointmentpage form div.city span{
+	display: block;
+	padding-right: 30px;
+	text-align: right;
+	font-size: 14px;
+	color: #999999;
+	line-height: 50px;
+	background: url('../images/selcity.png') right center no-repeat;
+	background-size: 20px auto;
+}
+.appointmentpage form ul.selcity{
+	width: 70%;
+	height: 50%;
+	background: #ffffff;
+	border: 1px solid #b81c22;
+	overflow: scroll;
+	position: fixed;
+	top: 25%;
+	left: 15%;
+	z-index: 999;
+}
+.appointmentpage form ul.selcity li{
+	list-style-type: none;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+.appointmentpage form ul.selcity li.sel{
+	background: #f3afb2;
+}
+.appointmentpage form ul.selcity li:active{
+	background: #f3afb2;
 }
 .appointmentpage form a.sub{
 	display: block;
@@ -689,14 +727,14 @@ a{
 	font-size: 14px;
 	color: #333333;
 }
-.addaddrpage .gray{
+.gray{
 	display: none;
 	width: 100%;
 	height: 100%;
 	position: fixed;
 	left: 0px;
 	top: 0px;
-	background: #999999;
+	background: #333333;
 	opacity: 0.8;
 	z-index: 998;
 }
@@ -984,22 +1022,57 @@ a{
 }
 .personalcenter .membershipsbox{
 	margin-top: 50px;
-	padding-top: 40px;
+	padding: 25px 0px;
 	height: 110px;
 	border-top: 1px solid #efeff4;
-	background: url('../images/person_bg.png') no-repeat;
+	background: url('../images/headimg_bg.jpg') no-repeat;
 	background-size: 100% 100%;
+	position: relative;
 }
 .personalcenter .membershipsbox .headimg{
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
 	margin: 0px auto;
-	-webkit-border-radius:30px;
-	-moz-border-radius:30px;
-	border-radius: 30px;
+	-webkit-border-radius:40px;
+	-moz-border-radius:40px;
+	border-radius: 40px;
 	border:2px solid #b81c22;
 	overflow: hidden;
+	position: relative;
 }
+.personalcenter .membershipsbox .headimg input{
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	opacity: 0;
+}
+.personalcenter .membershipsbox .schi{
+	position: absolute;
+	left:65%;
+	top: 70px; 
+}
+/*.personalcenter .membershipsbox .schi input{
+	font-size: 18px;
+	z-index: 100;
+	opacity: 0;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.personalcenter .membershipsbox .schi p{
+	width: 70px;
+	height: 30px;
+	font-size: 13px;
+	color: #b81c22;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #b81c22;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius: 5px;
+}*/
 .personalcenter .membershipsbox .headimg img{
 	width: 100%;
 }
@@ -1012,7 +1085,7 @@ a{
 }
 .personalcenter .orderbox{
 	height: 60px;
-	margin: 10px 0px;
+	margin-bottom: 10px;
 	padding: 10px 0px;
 	background: #ffffff;
 }
@@ -1078,77 +1151,56 @@ a{
 	margin-top: 10px;
 	margin-bottom: 75px;
 }
-.mycollectionpage ul{
-	margin-top: 50px;
+.mycollectionpage .collprobox .collpro:first-child{
+	margin-top: 60px;
 }
-.mycollectionpage ul li{
-	width: 50%;
-	float: left;
-	list-style-type: none;
-	position: relative;
-}
-.mycollectionpage ul li a{
-	display: block;
-	margin: 10px;
+.mycollectionpage .collprobox .collpro{
 	background: #ffffff;
-}
-.mycollectionpage ul li a .img{
-	width: 100%;
-}
-.mycollectionpage ul li a img{
-	width: 100%;
-	height: 100%;
-}
-.mycollectionpage ul li a p.pron{
-	font-size: 12px;
-	line-height: 18px;
-	height: 36px;
-	overflow: hidden;
-	color: #000000;
+	position: relative;
 	margin-top: 10px;
-	padding: 0px 5px;
+	padding: 10px 10px 10px 100px;
 }
-.mycollectionpage ul li a p.pri{
-	font-size: 13px;
-	color: #b81c22;
-	padding: 8px 5px;
-	position: relative;
-}
-.mycollectionpage ul li a p.pri span{
-	width: 60px;
-	height: 30px;
-	font-size: 12px;
-	color: #888888;
-	position: absolute;
-	right: 0px;
-	top: 8px;
-	text-decoration: line-through;
-}
-.mycollectionpage ul li .grabox{
-	display: none;
-	z-index: 998;
-	background: #999999;
-	opacity: 0.8;
-	position: absolute;
-	left: 10px;
-	top: 10px;
-}
-.mycollectionpage ul li .grabox a{
+.mycollectionpage .collprobox .collpro a{
 	display: block;
-	width: 24px;
-	height: 24px;
-	background: #ffffff;
-	-moz-border-radius:12px;
-	-webkit-border-radius:12px;
-	border-radius: 12px;
+}
+.mycollectionpage .collprobox .collpro a img{
+	display: block;
+	height: 88px;
 	position: absolute;
-	right: 5px;
-	top: 5px;
+	left: 0px;
+	top: 0px;
+}
+.mycollectionpage .collprobox .collpro a p.name{
+	font-size: 14px;
+	color: #000000;
+	line-height: 20px;
+	height: 40px;
+	overflow: hidden;
+}
+.mycollectionpage .collprobox .collpro a p.pri{
+	color: #b81c22;
+	font-size: 13px;
+	line-height: 20px;
+	margin: 4px 0px;
+}
+.mycollectionpage .collprobox .collpro a p.pri strike{
+	margin-left: 10px;
+	color: #333333;
+}
+.mycollectionpage .collprobox .collpro a.del{
+	width: 40px;
+	height: 25px;
 	font-size: 12px;
+	color: #b81c22;
 	text-align: center;
-	line-height: 24px;
-	color: #999999;
-	font-weight: bold;
+	line-height: 25px;
+	border: 1px solid #b81c22;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:5px;
+	border-radius: 5px;
+	position: absolute;
+	right: 20px;
+	bottom: 10px;
 }
 .myprescription .prescriptionbox .prescription{
 	padding: 0px 10px;

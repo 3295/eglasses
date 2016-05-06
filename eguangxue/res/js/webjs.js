@@ -25,12 +25,28 @@ JS.indexpage={
 JS.appointmentpage={
 	'init':function(){
 		$('.appointmentpage form .sex a').click(function(){
-			if ($(this).hasClass('sel')) {
+			if ($(this).hasClass('sel')) {	
 				return false;
 			}else{
 				$(this).addClass('sel').siblings().removeClass('sel');
 			}
+			$('.sex input').val($('.sex a.sel').text());
 		})
+	},
+	'selcity':function(){
+		$('form ul').show();
+		$('.gray').show();
+		$('.gray').click(function(){
+			$('ul').hide();
+			$(this).hide();
+		})
+	},
+	'selyes':function(a){
+		$(a).addClass('sel').siblings().removeClass('sel');
+		$(a).parent().siblings('.city').find('span').html($(a).html());
+		$(a).parent().hide();
+		$('.gray').hide();
+		$('.city input').val($('.city span').html());
 	}
 };
 JS.shopaddrpage={
@@ -96,22 +112,26 @@ JS.addaddrpage={
 	}
 	
 };
-JS.mycollection={
-	'show':function(m){
-		$(m).parent().hide().siblings('.topbox.hide').show();
-		$('.mycollectionpage ul li .grabox').width($('.mycollectionpage ul li a').width());
-		$('.mycollectionpage ul li .grabox').height($('.mycollectionpage ul li a').height());
-		$('.mycollectionpage ul li .grabox').show();
-	},
-	'hide':function(m){
-		$(m).parent().hide().siblings('.topbox').show();
-		$('.mycollectionpage ul li .grabox').hide();
-	},
-	'del':function(m){
-		$(m).parents('li').remove();
+JS.mycollectionpage={
+	'del':function(a){
+		$(a).parents('.collpro').remove();
 	}
-	
 };
+JS.personalcenter={
+	'upload_change':function(inp) {
+		if ( typeof(FileReader) === 'undefined' ){ 
+			alert('不支持！');
+
+		} else{
+			var file = inp[0].files[0];
+			var reader = new FileReader(); 
+			reader.readAsDataURL(file); 
+			reader.onload = function(e){ 
+				inp.siblings('img').attr('src', this.result);
+			} 
+		}
+	}
+}
 function promp(tiph,tipc){
 	var prompbox="<div class='prompbox' style='z-index:999;width:70%;height:24%;position:fixed;left:15%;top:38%;background:#ffffff;border:1px solid #9a9a9a;'></div>";
 	var gray="<div class='gray' style='z-index:998;width:100%;height:100%;position:fixed;left:0px;top:0px;background:#000000;opacity:0.8;'></div>";

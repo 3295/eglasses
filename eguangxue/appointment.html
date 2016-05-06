@@ -37,11 +37,21 @@
 				<p>性别：</p>
 				<a class='boy sel'><span><em></em></span>男</a>
 				<a class='girl'><span><em></em></span>女</a>
+				<input type='hidden' name='sex' value='男'>
 			</div>
 			<div class='city'>
 				<p>城市：</p>
-				<input type='text' value='' placeholder='请填写配镜人所在城市'>
+				<input type='hidden' value='' name=''>
+				<span onclick='JS.appointmentpage.selcity()'>请选择配镜人所在城市</span>
 			</div>
+			<ul class='selcity' style='display:none;'>
+				<li onclick='JS.appointmentpage.selyes(this)'>北京市</li>
+				<li onclick='JS.appointmentpage.selyes(this)'>上海市</li>
+				<li onclick='JS.appointmentpage.selyes(this)'>广州市</li>
+				<li onclick='JS.appointmentpage.selyes(this)'>深圳市</li>
+				<li onclick='JS.appointmentpage.selyes(this)'>天津市</li>
+				<li onclick='JS.appointmentpage.selyes(this)'>河北省</li>
+			</ul>
 			<div class='addr'>
 				<p>地址：</p>
 				<input type='text' value='' placeholder='请填写配镜人详细地址'>
@@ -67,6 +77,7 @@
 				</li>
 			</ul>
 		</div>
+		<div class='gray'></div>
 	</div>
 </body>
 </html>
