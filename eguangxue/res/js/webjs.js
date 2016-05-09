@@ -102,7 +102,7 @@ JS.addaddrpage={
 				code=$(e).attr("tag");
 			});
 			$(".area input").val(code);
-			$('.useraddr .area span').html(result);
+			$('.useraddr .area span').html(result).css('color','#555555');
 			JS.addaddrpage.out();
 		}else{
 			return false;

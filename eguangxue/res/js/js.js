@@ -218,6 +218,7 @@ JS.listsurepage={
 		var pro_pri=$('.listsure .pro .pro_intro .pro_pri');
 		var allpri=parseFloat($(pro_pri).find('span b').text())*parseInt($(pro_pri).find('.count input').val());
 		$('.subbox h4 span').html('￥'+allpri);
+		$('.subbox input').val(allpri);
 	},
 	'yesorno':function(m){
 		if ($(m).hasClass('sel')) {$(m).removeClass('sel');$(m).attr('tag','2')}else{$(m).addClass('sel');$(m).attr('tag','1')}

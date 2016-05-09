@@ -367,7 +367,7 @@ a{
 	color: #999999;
 	line-height: 50px;
 	background: url('../images/selcity.png') right center no-repeat;
-	background-size: 20px auto;
+	background-size: 15px auto;
 }
 .appointmentpage form ul.selcity{
 	width: 70%;
@@ -582,7 +582,7 @@ a{
 }
 .shopaddrpage .addbtn{
 	width: 100%;
-	height: 50px;
+	height: 60px;
 	position: fixed;
 	bottom: 0px;
 	left: 0px;
@@ -592,12 +592,12 @@ a{
 .shopaddrpage .addbtn a{
 	display: block;
 	width: 100px;
-	height: 30px;
+	height: 40px;
 	font-size: 12px;
 	background: #b81c22;
 	color: #ffffff;
 	text-align: center;
-	line-height: 30px;
+	line-height: 40px;
 	margin: 10px auto;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
@@ -638,7 +638,11 @@ a{
 	width: 100%;
 	height: 100%;
 	font-size: 14px;
+	color: #555555;
 	border: none;
+}
+.addaddrpage .mes>div.area{
+	padding-right: 30px;
 }
 .addaddrpage .mes>div.area span{
 	display: block;
@@ -646,6 +650,9 @@ a{
 	height: 100%;
 	font-size: 14px;
 	line-height: 50px;
+	color: #999999;
+	background: url('../images/selcity.png') right center no-repeat;
+	background-size: 15px auto;
 }
 .addaddrpage .mes>div.address{
 	padding: 10px 0px;

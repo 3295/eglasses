@@ -968,6 +968,9 @@ a{
 	background: #b81c22;
 	font-size: 14px;
 	color: #ffffff;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius: 5px;
 	text-align: center;
 	text-decoration: none;
 	position: absolute;
@@ -1175,7 +1178,7 @@ a{
 }
 .prodetails .joincart{
 	width: 100%;
-	height: 50px;
+	height: 60px;
 	position: fixed;
 	left: 0px;
 	bottom: 0px;
@@ -1191,21 +1194,21 @@ a{
 }
 .prodetails .joincart ul li a{
 	display: block;
-	height: 30px;
+	height: 40px;
 	margin: 10px auto;
-	-webkit-border-radius:3px;
-	-moz-border-radius:3px;
-	border-radius: 3px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius: 5px;
 }
 .prodetails .joincart ul li a.cart{
 	width: 60px;
-	height: 30px;
+	height: 40px;
 	border: 1px solid #999999;
 }
 .prodetails .joincart ul li a.cart span{
 	display: block;
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	margin: 0px auto;
 	background: url("../images/cart.png") center no-repeat;
 	background-size: 25px auto;
@@ -1230,20 +1233,20 @@ a{
 }
 .prodetails .joincart ul li a.join{
 	width: 100px;
-	height: 30px;
+	height: 40px;
 	background: #b81c22;
 	font-size: 13px;
 	color: #ffffff;
-	line-height: 30px;
+	line-height: 40px;
 	text-align: center;
 }
 .prodetails .joincart ul li a.shop{
 	width: 100px;
-	height: 30px;
+	height: 40px;
 	background: #b81c22;
 	font-size: 13px;
 	color: #ffffff;
-	line-height: 30px;
+	line-height: 40px;
 	text-align: center;
 }
 .prodetails .imgandsale .text h3.sel span{
