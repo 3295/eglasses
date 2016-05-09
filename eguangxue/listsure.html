@@ -43,14 +43,15 @@
 					<span>￥<b>1130</b></span>
 					<div class="count">
 	 					<a href="javascript:;" onclick="javascript:JS.listsurepage.min($(this))"><i class="iconfont">&#xe729;</i></a>
-						<input type="text" value="1">
+						<input type="text" value='1' oninput="JS.listsurepage.num($(this))">
 						<a href="javascript:;" onclick="javascript:JS.listsurepage.plus($(this))"><i class="iconfont">&#xe727;</i></a>
 	 				</div>
 				</div>
 			</div>
 		</div>
 		<div class='yanguang'>
-			<a class='sel' href="javascript:;" onclick='JS.listsurepage.yesorno(this)'><p>该商品支持上门验光服务，您是否需要？</p><span></span></a>
+			<input type='hidden' value='2'/>
+			<a class='' href="javascript:;" onclick='JS.listsurepage.yesorno(this)'><p>该商品支持上门验光服务，您是否需要？</p><span></span></a>
 		</div>
 		<div class="paymentbox">
 			<p>支付方式<a href="javascript:;"></a></p>
@@ -61,8 +62,10 @@
 		<div class="input">
 			<input class="message"type="text" value="" placeholder="给卖家留言">
 		</div>
-		<h4>应付金额<span>￥1130</span></h4>
-		<div class="btn"><a href="javascript:;">提交订单</a></div>
+		<div class='subbox'>
+			<h4>应付金额：<span>￥1130</span></h4>
+			<a href="javascript:;">提交订单</a>
+		</div>
 	</div>
 </body>
 </html>

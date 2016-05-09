@@ -217,10 +217,33 @@ JS.listsurepage={
 		var price=0;
 		var pro_pri=$('.listsure .pro .pro_intro .pro_pri');
 		var allpri=parseFloat($(pro_pri).find('span b').text())*parseInt($(pro_pri).find('.count input').val());
-		$('h4 span').html('￥'+allpri);
+		$('.subbox h4 span').html('￥'+allpri);
 	},
 	'yesorno':function(m){
-		if ($(m).hasClass('sel')) {$(m).removeClass('sel')}else{$(m).addClass('sel')}
+		if ($(m).hasClass('sel')) {$(m).removeClass('sel');$(m).attr('tag','2')}else{$(m).addClass('sel');$(m).attr('tag','1')}
+		$('.yanguang input').val($(m).attr('tag'));
+	},
+	'IsNum':function(e){
+		
+	      var k = window.event ? e.keyCode : e.which;
+            if (((k >= 48) && (k <= 57)) || k == 8 || k == 0) {
+
+            } else {
+                if (window.event) {
+                    window.event.returnValue = false;
+                }
+                else {
+                    e.preventDefault(); //for firefox 
+                }
+            }
+	},
+	'num':function(a){
+		if (!isNaN(a.val())) {
+			if (a.val()<1) {a.val(1)}
+		}else{
+			a.val(1);
+			alert("输入有误！")
+		}
 	}
 }
 function promp(tiph,tipc){

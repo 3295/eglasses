@@ -46,7 +46,7 @@ JS.appointmentpage={
 		$(a).parent().siblings('.city').find('span').html($(a).html());
 		$(a).parent().hide();
 		$('.gray').hide();
-		$('.city input').val($('.city span').html());
+		$('.city input').val($(a).attr('tag'));
 	}
 };
 JS.shopaddrpage={
