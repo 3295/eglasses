@@ -124,6 +124,7 @@ a{
 	width: 100%;
 	height: 50px;
 	background-color: #ffffff;
+	border-bottom: 1px solid #e9ecf1;
 	z-index: 990;
 	position: fixed;
 	left: 0px;
@@ -1059,12 +1060,12 @@ a{
 	z-index: 998;
 }
 .myorderpage .list{
-	margin-top: 55px;
+	margin-top: 60px;
 	
 }
 .myorderpage .list .listbox{
 	background: #ffffff;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	padding: 0px 10px;
 }
 .myorderpage .list .listbox .list_num{
@@ -1074,14 +1075,6 @@ a{
 	font-size: 14px;
 	color: #666666;
 	border-bottom: 1px solid #e9ecf1;
-	position: relative;
-}
-.myorderpage .list .listbox .list_num a{
-	position: absolute;
-	right: 20px;
-	font-size: 14px;
-	color: #666666;
-	text-decoration: none;
 }
 .myorderpage .list .listbox .pro{
 	width: 100%;
@@ -1128,25 +1121,31 @@ a{
 	border-top: 1px solid #e9ecf1;
 	font-size: 12px;
 	color: #8c8c8c;
-	height: 34px;
-	line-height: 34px;
+	height: 40px;
+	line-height: 40px;
 	position: relative;
 }
 .myorderpage .list .listbox p.pri span{
 	font-size: 14px;
 	color: #b81c22;
 }
+.myorderpage .list .listbox p.pri a.del{
+	position: absolute;
+	top: 4px;
+	right: 100px;
+}
 .myorderpage .list .listbox p.pri a{
+	display: block;
 	font-size: 14px;
 	color: #ffffff;
-	text-decoration: none;
+	height: 32px;
 	background: #b81c22;
-	padding: 2px 15px;
+	padding: 0px 10px;
 	border-radius: 3px;
 	position: absolute;
 	right: 5px;
-	top: 5px;
-	line-height: 20px;
+	top: 4px;
+	line-height: 32px;
 }
 .nulllist{
 	margin-bottom: 60px;
@@ -1204,8 +1203,8 @@ a{
 	border-right:none;
 }
 .orderdetailspage .anarchy{
-	margin-top: 55px;
-	margin-bottom: 5px;
+	margin-top: 60px;
+	margin-bottom: 10px;
 	height: 100px;
 	background: #ffffff;
 }
@@ -1233,7 +1232,7 @@ a{
 }
 .orderdetailspage .useradd{
 	background: #ffffff;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	padding: 6px 10px 10px 40px;
 	position: relative;
 }
@@ -1268,7 +1267,7 @@ a{
 }
 .orderdetailspage .listbox{
 	background: #ffffff;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	padding: 0px 10px;
 }
 .orderdetailspage .listbox .list_num{
@@ -1334,11 +1333,39 @@ a{
 .orderdetailspage .timebox{
 	padding: 6px 10px;
 	background: #ffffff;
+	margin-bottom: 60px;
 }
 .orderdetailspage .timebox p{
 	font-size: 12px;
 	line-height: 20px;
 	color: #666666;
+}
+.orderdetailspage .btnbox{
+	width: 100%;
+	height: 50px;
+	background: #ffffff;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	border-top: 1px solid #e9ecf1;
+}
+.orderdetailspage .btnbox a{
+	display: block;
+	font-size: 14px;
+	color: #ffffff;
+	height: 32px;
+	background: #b81c22;
+	padding: 0px 10px;
+	border-radius: 3px;
+	position: absolute;
+	right: 5px;
+	top: 9px;
+	line-height: 32px;
+}
+.orderdetailspage .btnbox a.del{
+	position: absolute;
+	right: 100px;
+	top: 9px;
 }
 .personalcenter .membershipsbox{
 	margin-top: 50px;
@@ -1353,9 +1380,9 @@ a{
 	width: 80px;
 	height: 80px;
 	margin: 0px auto;
-	-webkit-border-radius:40px;
-	-moz-border-radius:40px;
-	border-radius: 40px;
+	-webkit-border-radius:42px;
+	-moz-border-radius:42px;
+	border-radius: 42px;
 	border:2px solid #b81c22;
 	overflow: hidden;
 	position: relative;

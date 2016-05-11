@@ -30,8 +30,8 @@ JS.indexpage={
 		$('.indexpage .headerbox').css({'animation':'indexpageclose 1 0.3s','-moz-animation':'indexpageclose 1 0.3s','-webkit-animation':'indexpageclose 1 0.3s','-o-animation':'indexpageclose 1 0.3s','position':'fixed','left':'70%','top':'0px'});
 		$('.indexpage .footerbox').css({'animation':'footerclose 1 0.3s','-moz-animation':'footerclose 1 0.3s','-webkit-animation':'footerclose 1 0.3s','-o-animation':'footerclose 1 0.3s','position':'fixed','left':'70%','bottom':'0px'});
 	},
-	'leftclose':function(a){
-		$(a).hide();
+	'leftclose':function(){
+		$('.hidbox').hide();
 		$('.leftslidebox').css({'animation':'leftslideboxclose 1 0.3s','-moz-animation':'leftslideboxclose 1 0.3s','-webkit-animation':'leftslideboxclose 1 0.3s','-o-animation':'leftslideboxclose 1 0.3s'});
 		$('.leftslidebox a').css({'animation':'aclose 1 0.3s','-moz-animation':'aclose 1 0.3s','-webkit-animation':'aclose 1 0.3s','-o-animation':'aclose 1 0.3s'});
 		$('.indexpage').css({'animation':'indexpageopen 1 0.3s','-moz-animation':'indexpageopen 1 0.3s','-webkit-animation':'indexpageopen 1 0.3s','-o-animation':'indexpageopen 1 0.3s','position':'absolute','left':'0px','top':'0px'});
@@ -150,6 +150,12 @@ JS.personalcenter={
 				inp.siblings('img').attr('src', this.result);
 			} 
 		}
+	}
+}
+JS.myorderpage={
+	'del':function(a){
+		console.log(a);
+		$(a).parents('.listbox').remove();
 	}
 }
 function promp(tiph,tipc){
