@@ -20,6 +20,26 @@ JS.indexpage={
 			var dn = $('.dotModule_new');
 			dn.css('right', (W-dn.width())/2);
 		}
+	},
+	'leftopen':function(){
+		$('.leftslidebox').show();
+		$('.leftslidebox').css({'animation':'leftslideboxopen 1 0.3s','-moz-animation':'leftslideboxopen 1 0.3s','-webkit-animation':'leftslideboxopen 1 0.3s','-o-animation':'leftslideboxopen 1 0.3s'});
+		$('.leftslidebox a').css({'animation':'aopen 1 0.3s','-moz-animation':'aopen 1 0.3s','-webkit-animation':'aopen 1 0.3s','-o-animation':'aopen 1 0.3s'});
+		$('.indexpage .hidbox').show();
+		$('.indexpage').css({'animation':'indexpageclose 1 0.3s','-moz-animation':'indexpageclose 1 0.3s','-webkit-animation':'indexpageclose 1 0.3s','-o-animation':'indexpageclose 1 0.3s','position':'fixed','left':'70%','top':'0px'});
+		$('.indexpage .headerbox').css({'animation':'indexpageclose 1 0.3s','-moz-animation':'indexpageclose 1 0.3s','-webkit-animation':'indexpageclose 1 0.3s','-o-animation':'indexpageclose 1 0.3s','position':'fixed','left':'70%','top':'0px'});
+		$('.indexpage .footerbox').css({'animation':'footerclose 1 0.3s','-moz-animation':'footerclose 1 0.3s','-webkit-animation':'footerclose 1 0.3s','-o-animation':'footerclose 1 0.3s','position':'fixed','left':'70%','bottom':'0px'});
+	},
+	'leftclose':function(a){
+		$(a).hide();
+		$('.leftslidebox').css({'animation':'leftslideboxclose 1 0.3s','-moz-animation':'leftslideboxclose 1 0.3s','-webkit-animation':'leftslideboxclose 1 0.3s','-o-animation':'leftslideboxclose 1 0.3s'});
+		$('.leftslidebox a').css({'animation':'aclose 1 0.3s','-moz-animation':'aclose 1 0.3s','-webkit-animation':'aclose 1 0.3s','-o-animation':'aclose 1 0.3s'});
+		$('.indexpage').css({'animation':'indexpageopen 1 0.3s','-moz-animation':'indexpageopen 1 0.3s','-webkit-animation':'indexpageopen 1 0.3s','-o-animation':'indexpageopen 1 0.3s','position':'absolute','left':'0px','top':'0px'});
+		$('.indexpage .headerbox').css({'animation':'indexpageopen 1 0.3s','-moz-animation':'indexpageopen 1 0.3s','-webkit-animation':'indexpageopen 1 0.3s','-o-animation':'indexpageopen 1 0.3s','position':'fixed','left':'0px','top':'0px'});
+		$('.indexpage .footerbox').css({'animation':'footeropen 1 0.3s','-moz-animation':'footeropene 1 0.3s','-webkit-animation':'footeropen 1 0.3s','-o-animation':'footeropen 1 0.3s','position':'fixed','left':'0px','bottom':'0px'});
+		setTimeout(function(){
+			$('.leftslidebox').hide();
+		},300)
 	}
 };
 JS.appointmentpage={

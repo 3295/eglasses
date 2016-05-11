@@ -17,22 +17,24 @@
 	</script>
 </head>
 <body>
+	<div class='leftslidebox' style='display:none;'>
+		<ul>
+			<li class='home'><a href="index.html" ><img src="res/images/home_red.png">首页</a></li>
+			<li><a href="prolist.html"><img src="res/images/yanjing.jpg">太阳镜</a></li>
+			<li><a href="#here"><img src="res/images/yanjing.jpg">近视镜</a></li>
+			<li><a href="#here"><img src="res/images/yanjing.jpg">美瞳隐形</a></li>
+			<li><a href="#here"><img src="res/images/yanjing.jpg">功能眼镜</a></li>
+			<li><a href="#here"><img src="res/images/yanjing.jpg">功能眼镜</a></li>
+		</ul>
+	</div>
+	
 	<div class="indexpage">
+		<div class='hidbox' onclick='JS.indexpage.leftclose(this)' style='display:none;'></div>
 		<div class='headerbox'>
-			<a class='search' href="javascript:;"></a>
+			<a class='search' href="javascript:;" onclick='JS.indexpage.leftopen()'></a>
 			<img src="res/images/logo.png">
 			<a class='cart' href="cart.html"></a>
 		</div>
-		<!-- <div class='item'>
-			<ul>
-				<li class='act'><a href="javascript:;">首页</a></li>
-				<li><a href="javascript:;">近视镜</a></li>
-				<li><a href="javascript:;">太阳镜</a></li>
-				<li><a href="javascript:;">美瞳隐形</a></li>
-				<li><a href="javascript:;">功能眼镜</a></li>
-				<div class='cle'></div>
-			</ul>
-		</div> -->
 		<div class="scroll">
 			<div class="slide_01" id="slide_01">
 				<div class="mod_01"><a href="#"><img src="res/images/banner/banner_s.png"></a></div>
