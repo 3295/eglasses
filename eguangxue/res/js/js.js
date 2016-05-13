@@ -217,8 +217,12 @@ JS.listsurepage={
 		var price=0;
 		var pro_pri=$('.listsure .pro .pro_intro .pro_pri');
 		var allpri=parseFloat($(pro_pri).find('span b').text())*parseInt($(pro_pri).find('.count input').val());
-		$('.subbox h4 span').html('￥'+allpri);
-		$('.subbox input').val(allpri);
+		var dis = parseFloat($('.listsure .qydmbox input').val());
+		var allpri_now=(allpri*dis).toFixed(2);
+		var dispri=(allpri-allpri_now).toFixed(2);
+		$('.listsure .qydmbox a').html("您已享受优惠<span>-￥"+dispri+"</span>");
+		$('.subbox h4 span').html('￥'+allpri_now);
+		$('.subbox input').val(allpri_now);
 	},
 	'yesorno':function(m){
 		if ($(m).hasClass('sel')) {$(m).removeClass('sel');$(m).attr('tag','2')}else{$(m).addClass('sel');$(m).attr('tag','1')}
@@ -245,6 +249,14 @@ JS.listsurepage={
 			a.val(1);
 			alert("输入有误！")
 		}
+	},
+	'forword':function(a){
+		$(a).parent().parent().hide().siblings().show();
+	},
+	'discount':function(a){
+		$(a).parents('.syqydmbox').hide().siblings().show();
+		$('.listsure .qydmbox input').val(0.5);
+		JS.listsurepage.allpri();
 	}
 }
 function promp(tiph,tipc){

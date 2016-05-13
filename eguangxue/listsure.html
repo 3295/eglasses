@@ -53,19 +53,38 @@
 			<input type='hidden' value='2'/>
 			<a class='' href="javascript:;" onclick='JS.listsurepage.yesorno(this)'><p>该商品支持上门验光服务，您是否需要？</p><span></span></a>
 		</div>
+		<div class='qydmbox'>
+			<a href="javascript:;" onclick='JS.listsurepage.forword(this)'>使用企业代码<span></span></a>
+			<input type='hidden' value='1'/>
+		</div>
 		<div class="paymentbox">
 			<p>支付方式<a href="javascript:;"></a></p>
 			<div class="pay">
 				<p class="alipay active"><img src="res/images/pay_alipay.png">支付宝支付<span></span></p>
 			</div>
 		</div>
-		<div class="input">
+		<div class="liuyan">
 			<input class="message"type="text" value="" placeholder="给卖家留言">
 		</div>
 		<div class='subbox'>
 			<input type='hidden' value=''>
-			<h4>应付金额：<span>￥1130</span></h4>
+			<h4>应付金额：<span>￥<em style='font-style: normal;'>1130</em></span></h4>
 			<a href="javascript:;">提交订单</a>
+		</div>
+	</div>
+	<div class='syqydmbox' style='display:none;'>
+		<div class='syqydmhead'>
+			<p>使用企业代码</p>
+			<a href="javascript:;" onclick='JS.listsurepage.forword(this)'>╳</a>
+		</div>
+		<div class='syqydmcon'>
+			<p>请输入企业代码：</p>
+			<input type='text' value='' placeholder='输入企业代码立享优惠' />
+		</div>
+		<div class='used'><a href="javascript:;" onclick='JS.listsurepage.discount(this)'>使用</a></div>	
+		<div class='rules'>
+			<p>使用规则</p>
+			<span>1.企业代码可享受7折优惠企业代码可享受7折优惠企业代码可享受7折优惠；</span>
 		</div>
 	</div>
 </body>

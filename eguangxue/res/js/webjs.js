@@ -63,7 +63,7 @@ JS.appointmentpage={
 	},
 	'selyes':function(a){
 		$(a).addClass('sel').siblings().removeClass('sel');
-		$(a).parent().siblings('.city').find('span').html($(a).html());
+		$(a).parent().siblings('.city').find('span').html($(a).html()).css({'color':'#000000'});
 		$(a).parent().hide();
 		$('.gray').hide();
 		$('.city input').val($(a).attr('tag'));
