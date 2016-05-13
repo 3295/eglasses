@@ -258,7 +258,6 @@ JS.listsurepage={
 	},
 	'discount':function(a){
 		$(a).parents('.syqydmbox').hide().siblings().show();
-		$('.listsure .qydmbox input.zk').val(0.5);
 		JS.listsurepage.allpri();
 	}
 }
