@@ -257,8 +257,27 @@ JS.listsurepage={
 		$(a).parent().parent().hide().siblings().show();
 	},
 	'discount':function(a){
-		$(a).parents('.syqydmbox').hide().siblings().show();
+		$(a).parent().parent().hide().siblings().show();
 		JS.listsurepage.allpri();
+	}
+};
+JS.listsure_fcart={
+	'allpri':function(a){
+		$(a).parent().parent().hide().siblings().show();
+		var allpri=0;
+		$.each($('.listsure .pro'),function(i,e){
+			allpri+=parseFloat($(e).find('.pro_pri span b').text())*parseInt($(e).find('.count_fcart p em').html());
+		});
+		var dis = parseFloat($('.listsure .qydmbox input.zk').val());
+		var allpri_now=(allpri*dis).toFixed(2);
+		var dispri=(allpri-allpri_now).toFixed(2);
+		$('.subbox h4 span').html('￥'+allpri_now);
+		$('.subbox input').val(allpri_now);
+		if (dis==1) {return false;}else{
+			$('.listsure .qydmbox a').html("您已享受优惠<span>-￥"+dispri+"</span>");
+			$('.listsure .qydmbox input.yhpri').val(dispri);
+		};
+		
 	}
 }
 function promp(tiph,tipc){

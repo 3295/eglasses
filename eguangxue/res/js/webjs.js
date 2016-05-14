@@ -154,7 +154,6 @@ JS.personalcenter={
 }
 JS.myorderpage={
 	'del':function(a){
-		console.log(a);
 		$(a).parents('.listbox').remove();
 	}
 }
