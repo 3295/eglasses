@@ -239,10 +239,10 @@ a{
 	position: relative;
 }
 .leftslidebox ul li a img{
-	height: 16px;
+	height: 8px;
 	position: absolute;
 	left: 0px;
-	top: 22px;
+	top: 26px;
 }
 @keyframes leftslideboxopen
 {
@@ -560,12 +560,19 @@ a{
 	padding: 0px 170px 0px 30px;
 	position: relative;
 }
-.indexpage .specialbox .special a p em{
+/*.indexpage .specialbox .special a p em{
 	display: block;
 	width: 30px;
 	height: 40px;
 	background: url('../images/yanjing.jpg') center no-repeat;
 	background-size: 15px auto;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}*/
+.indexpage .specialbox .special a p img{
+	display: block;
+	height: 40px;
 	position: absolute;
 	left: 0px;
 	top: 0px;
