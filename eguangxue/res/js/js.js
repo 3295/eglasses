@@ -131,6 +131,7 @@ JS.cartpage={
 		var inp = btn.prev();
 		var count = parseInt(inp.val())+1;
 		inp.val(count);
+		$(btn).parent().siblings('.radio').find('input.num').val(count);
 		JS.cartpage._allprice();
 	},
 	'count_mins':function(btn){
@@ -138,6 +139,7 @@ JS.cartpage={
 		var count = parseInt(inp.val())-1;
 		if(count<=0) count = 1;
 		inp.val(count);
+		$(btn).parent().siblings('.radio').find('input.num').val(count);
 		JS.cartpage._allprice();
 	},
 	'_allprice':function(){

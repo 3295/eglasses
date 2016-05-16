@@ -13,6 +13,15 @@
 		$(function(){
 			JS.cartpage.init();
 		});
+		function gopay(){
+			var proarr=[];
+			$.each($('.list .pro .checked'),function(i,e){
+				var pid=$(e).find('input.pid');
+				var sid=$(e).find('input.sid');
+				var num=$(e).find('input.num');
+				proarr[i]={'pid':pid.val(),'sid':sid.val(),'num':num.val()};
+			});
+		}
 	</script>
 </head>
 <body>
@@ -23,7 +32,12 @@
 		<div class="list">
 			<div class="pro">
 				<a class='del'>✕</a>
-				<div class="radio checked"><a href="javascript:;"><i class="iconfont">&#xe72f;</i><i class="iconfont full">&#xe71f;</i></a></div>
+				<div class="radio checked"><a href="javascript:;"><i class="iconfont">&#xe72f;</i><i class="iconfont full">&#xe71f;</i></a>
+					<input class='pid' type='hidden' name='pid' value='1'/>
+					<input class='sid' type='hidden' name='sid' value='1'/>
+					<input class='num' type='hidden' name='num' value='1'>
+				</div>
+				
 				<div class="img"><a href="javascript:;"><img src="res/images/pro1.jpg"></a></div>
 				<div class="name">
 					<a href="javascript:;">
@@ -38,13 +52,17 @@
  				</div>
  				<div class="count">
  					<a href="javascript:;"  onclick="javascript:JS.cartpage.count_mins($(this))"><i class="iconfont">&#xe729;</i></a>
-					<input type="text" value="1">
+					<input type="text" name='num' value="1">
 					<a href="javascript:;" class="plus" onclick="javascript:JS.cartpage.count_plus($(this))"><i class="iconfont">&#xe727;</i></a>
  				</div>
 			</div>
 			<div class="pro">
 				<a class='del'>✕</a>
-				<div class="radio "><a href="javascript:;"><i class="iconfont">&#xe72f;</i><i class="iconfont full">&#xe71f;</i></a></div>
+				<div class="radio "><a href="javascript:;"><i class="iconfont">&#xe72f;</i><i class="iconfont full">&#xe71f;</i></a>
+					<input class='pid' type='hidden' name='pid' value='2'>
+					<input class='sid' type='hidden' name='sid' value='2'>
+					<input class='num' type='hidden' name='num' value='1'>
+				</div>
 				<div class="img"><a href="javascript:;"><img src="res/images/pro2.jpg"></a></div>
 				<div class="name">
 					<a href="javascript:;">
@@ -65,7 +83,11 @@
 			</div>
 			<div class="pro">
 				<a class='del'>✕</a>
-				<div class="radio "><a href="javascript:;"><i class="iconfont">&#xe72f;</i><i class="iconfont full">&#xe71f;</i></a></div>
+				<div class="radio "><a href="javascript:;"><i class="iconfont">&#xe72f;</i><i class="iconfont full">&#xe71f;</i></a>
+					<input class='pid' type='hidden' name='pid' value='3'>
+					<input class='sid' type='hidden' name='sid' value='3'>
+					<input class='num' type='hidden' name='num' value='1'>
+				</div>
 				<div class="img"><a href="javascript:;"><img src="res/images/pro1.jpg"></a></div>
 				<div class="name">
 					<a href="javascript:;">
@@ -93,7 +115,7 @@
 			<div class="allprice">
 				<a class="sellall" href="javascript:;"><i class="iconfont">&#xe72f;</i><i class="iconfont full">&#xe71f;</i></a>
 				<span>全选</span>
-				<a class="cartsub" href="listsure.html">确认</a>
+				<a class="cartsub" onclick='gopay()'>确认</a>
 				<p>总计：<span>￥<b>1365.00</b></span></p>
 			</div>
 		</div>
