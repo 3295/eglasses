@@ -239,10 +239,10 @@ a{
 	position: relative;
 }
 .leftslidebox ul li a img{
-	height: 8px;
+	height: 10px;
 	position: absolute;
 	left: 0px;
-	top: 26px;
+	top: 25px;
 }
 @keyframes leftslideboxopen
 {
@@ -560,22 +560,12 @@ a{
 	padding: 0px 170px 0px 30px;
 	position: relative;
 }
-/*.indexpage .specialbox .special a p em{
-	display: block;
-	width: 30px;
-	height: 40px;
-	background: url('../images/yanjing.jpg') center no-repeat;
-	background-size: 15px auto;
-	position: absolute;
-	left: 0px;
-	top: 0px;
-}*/
 .indexpage .specialbox .special a p img{
-	display: block;
-	height: 40px;
+	/*display: block;*/
+	width: 22px;
 	position: absolute;
-	left: 0px;
-	top: 0px;
+	left: 4px;
+	top: 15px;
 }
 .indexpage .specialbox .special a p span{
 	display: block;
@@ -1244,12 +1234,30 @@ a{
 	position: absolute;
 	left: 0px;
 	top: 0px;
-	background: url('../images/ok.png') no-repeat center;
-	background-size: auto 40px;
 }
-.orderdetailspage .anarchy p.no span{
-	background: url('../images/no.png') no-repeat center;
-	background-size: auto 40px;
+.orderdetailspage .anarchy p.dzf span{
+	background: url('../images/order_dzf.jpg') no-repeat center;
+	background-size: auto 50px;
+}
+.orderdetailspage .anarchy p.dfh span{
+	background: url('../images/order_dfh.jpg') no-repeat center;
+	background-size: auto 50px;
+}
+.orderdetailspage .anarchy p.dsh span{
+	background: url('../images/order_dsh.jpg') no-repeat center;
+	background-size: auto 50px;
+}
+.orderdetailspage .anarchy p.ywc span{
+	background: url('../images/order_ywc.jpg') no-repeat center;
+	background-size: auto 50px;
+}
+.orderdetailspage .anarchy p.tkz span{
+	background: url('../images/order_tkz.jpg') no-repeat center;
+	background-size: auto 50px;
+}
+.orderdetailspage .anarchy p.tkwc span{
+	background: url('../images/order_tkwc.jpg') no-repeat center;
+	background-size: auto 50px;
 }
 .orderdetailspage .useradd{
 	background: #ffffff;
@@ -1449,8 +1457,8 @@ a{
 	float: left;
 }
 .personalcenter .orderbox a div{
-	width: 20px;
-	height: 20px;
+	width: 24px;
+	height: 24px;
 	margin: 10px auto;
 	position: relative;
 }

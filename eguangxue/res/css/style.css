@@ -267,7 +267,6 @@ a{
 	-webkit-border-radius:15px;
 	-moz-border-radius:15px;
 	border-radius: 15px;
-	
 	background: url('../images/up.png') center no-repeat;
 	background-size: auto 15px;
 	background-color: #b81c22;
@@ -438,6 +437,7 @@ a{
 	display: block;
 	height: 22px;
 	border: none;
+	background: #ffffff;
 	border-bottom: 1px solid #d7d7d7;
 	border-top: 1px solid #d7d7d7;
 	width: 24px;
@@ -844,6 +844,7 @@ a{
 	background: #b81c22;
 }
 .listsure .pro .count input{
+	background: #ffffff;
 	display: block;
 	height: 22px;
 	border: none;
@@ -869,7 +870,7 @@ a{
 	display: block;
 }
 .listsure .yanguang a p{
-	font-size: 13px;
+	font-size: 12px;
 	line-height: 36px;
 	color: #333333;
 }

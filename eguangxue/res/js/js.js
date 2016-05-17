@@ -137,13 +137,15 @@ JS.cartpage={
 	'count_mins':function(btn){
 		var inp = btn.next();
 		var count = parseInt(inp.val())-1;
-		if(count<=0) count = 1;
+		
+		if(count<=0) count = 1;console.log(count);
 		inp.val(count);
 		$(btn).parent().siblings('.radio').find('input.num').val(count);
 		JS.cartpage._allprice();
 	},
 	'_allprice':function(){
 		var price = 0;
+		if ($('.cartpage .pro .count input').val()==null) {$('.cartpage .pro .count input').val(1)};
 		$.each($('.cartpage .pro'), function(i, v){
 			if($(v).find('div.radio').hasClass('checked')){
 				price += parseFloat($(v).find('.price span').text())*parseInt($(v).find('.count input').val());
