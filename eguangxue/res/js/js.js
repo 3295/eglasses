@@ -24,6 +24,7 @@ JS.indexpage={
 };
 var width=0;
 JS.prolistpage = {
+	'state':8,
 	'currpage':1,	//当前页码 默认1
 	'init':function(opt){
 		if(typeof(opt)=='undefined') opt = {};
@@ -68,6 +69,7 @@ JS.prolistpage = {
 		    //     });
 		    // },
 	 	    loadDownFn : function(me){
+	 	    	if (JS.prolistpage.state==0) {return false};
 		        $.ajax({
 		            type: 'GET',
 		            url: opt.path+'/product/index_ajax.htm',
@@ -77,6 +79,7 @@ JS.prolistpage = {
 		            },
 		            dataType: 'json',
 		            success: function(data){
+		            	if (data.product.length==0) {JS.prolistpage.state=0}
 		                var result = '';
 		                 $.each(data.product,function(i,e){
 		                	result+="<li><a href='"+opt.path+"/product/detial.htm?pid="+e.id+"'><div class='img' style='height:"+width+"px;'><img src='"+data.prefix_url+"/"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>"

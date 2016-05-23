@@ -283,7 +283,7 @@ a{
 }
 .cartpage .list{
 	display: block;
-	margin: 60px 0px;
+	margin: 60px 0px 50px 0px;
 }
 .cartpage .list .pro{
 	display: block;
@@ -453,7 +453,7 @@ a{
 .cartpage .allprice{
 	display: block;
 	width: 100%;
-	height: 60px;
+	height: 50px;
 	position: fixed;
 	left: 0px;
 	bottom: 0px;
@@ -477,7 +477,7 @@ a{
 }
 .cartpage .allprice>*{
 	float: right;
-	line-height: 60px;
+	line-height: 50px;
 	font-size: 14px;
 }
 .cartpage .allprice .sellall{
@@ -503,17 +503,13 @@ a{
 }
 .cartpage .allprice a.cartsub{
 	display: block;
-	width: 70px;
-	height: 40px;
-	margin: 10px 10px;
+	width: 100px;
+	height: 100%;
+	margin-left: 15px;
 	background: #b81c22;
 	font-size: 15px;
 	color: #ffffff;
 	text-align: center;
-	line-height: 40px;
-	-moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius:5px;
 }
 .nullpage{
 	display: block;
@@ -521,7 +517,7 @@ a{
 	height: auto;
 }
 .nullpage .box{
-	margin-bottom: 60px;
+	margin-bottom: 50px;
 	padding: 120px 0px;
 }
 .nullpage .box i{
@@ -962,7 +958,7 @@ a{
 	padding-left: 10px;
 	border-top:1px solid #dadee5;
 	border-bottom:1px solid #dadee5;
-	margin-bottom: 65px;
+	margin-bottom: 55px;
 }
 .listsure .liuyan input{
 	width:100%;
@@ -976,7 +972,8 @@ a{
 
 .listsure .subbox{
 	width: 100%;
-	height: 60px;
+	height: 50px;
+	line-height: 50px;
 	border-top: 1px solid #dadee5;
 	background: #ffffff;
 	position: fixed;
@@ -985,33 +982,28 @@ a{
 }
 .listsure .subbox h4{
 	font-weight: normal;
-	line-height: 60px;
 	color: #000000;
 	font-size: 14px;
 	position: relative;
 	padding-left: 10px;
+	padding-right: 100px;
 	position: relative;
 }
 .listsure .subbox h4 span{
 	color: #b81c22;
-	margin-left: 10px;
 }
 .listsure .subbox a{
 	display: block;
-	width: 80px;
-	height: 40px;
-	line-height: 40px;
+	width: 100px;
+	height: 100%;
 	background: #b81c22;
 	font-size: 14px;
 	color: #ffffff;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	border-radius: 5px;
 	text-align: center;
 	text-decoration: none;
 	position: absolute;
-	right: 15px;
-	top: 10px;
+	right: 0px;
+	top: 0px;
 }
 .syqydmbox{
 	position: fixed;
@@ -1101,16 +1093,17 @@ a{
 }
 .prodetails a.retu{
 	display: block;
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	background: url("../images/returnw.png") center no-repeat;
 	background-size: auto 15px;
-	background-color: #999999;
-	-moz-border-radius:15px;
-	border-radius: 15px;
+	background-color: #000000;
+	opacity: 0.4;
+	-moz-border-radius:20px;
+	border-radius: 20px;
 	position: fixed;
 	left: 12px;
-	top: 12px;
+	top: 7px;
 	z-index: 2;
 }
 .prodetails #rotate{
@@ -1247,6 +1240,7 @@ a{
 }
 .prodetails .prodeta .imgandsale{
 	position: relative;
+	margin-bottom: 50px;
 }
 .prodetails .prodeta .imgandsale .img{
 	display: block;
@@ -1267,9 +1261,6 @@ a{
 	display: none;
 	width: 100%;
 	background:#ffffff;
-}
-.prodetails .prodeta .imgandsale .aftersale{
-	margin-bottom: 50px;
 }
 .prodetails .prodeta .imgandsale .aftersale p.p_h{
 	font-size: 14px;
@@ -1294,7 +1285,8 @@ a{
 }
 .prodetails .joincart{
 	width: 100%;
-	height: 60px;
+	height: 50px;
+	line-height: 50px;
 	position: fixed;
 	left: 0px;
 	bottom: 0px;
@@ -1303,31 +1295,26 @@ a{
 	z-index: 2;
 }
 .prodetails .joincart ul li{
-	width: 33%;
+	width: 35%;
 	height: 100%;
 	float: left;
 	list-style-type: none;
 }
+.prodetails .joincart ul li:first-child{
+	width: 30%;
+}
 .prodetails .joincart ul li a{
 	display: block;
-	height: 40px;
-	margin: 10px auto;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	border-radius: 5px;
-}
-.prodetails .joincart ul li a.cart{
-	width: 60px;
-	height: 40px;
-	border: 1px solid #999999;
+	width: 100%;
+	height: 100%;
 }
 .prodetails .joincart ul li a.cart span{
 	display: block;
 	width: 40px;
 	height: 40px;
-	margin: 0px auto;
-	background: url("../images/cart.png") center no-repeat;
-	background-size: 25px auto;
+	margin: 5px auto;
+	background: url("../images/cart.jpg") center no-repeat;
+	background-size: 30px auto;
 	position: relative;
 }
 .prodetails .joincart ul li a.cart span em{
@@ -1348,21 +1335,15 @@ a{
 	font-style: normal;
 }
 .prodetails .joincart ul li a.join{
-	width: 100px;
-	height: 40px;
-	background: #b81c22;
+	background: #eda200;
 	font-size: 13px;
 	color: #ffffff;
-	line-height: 40px;
 	text-align: center;
 }
 .prodetails .joincart ul li a.shop{
-	width: 100px;
-	height: 40px;
 	background: #b81c22;
 	font-size: 13px;
 	color: #ffffff;
-	line-height: 40px;
 	text-align: center;
 }
 .prodetails .imgandsale .text h3.sel span{
