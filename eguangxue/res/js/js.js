@@ -79,17 +79,24 @@ JS.prolistpage = {
 		            },
 		            dataType: 'json',
 		            success: function(data){
-		            	if (data.product.length==0) {JS.prolistpage.state=0}
-		                var result = '';
-		                 $.each(data.product,function(i,e){
-		                	result+="<li><a href='"+opt.path+"/product/detial.htm?pid="+e.id+"'><div class='img' style='height:"+width+"px;'><img src='"+data.prefix_url+"/"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>"
-		                });
-		                $('ul.probox').append(result);
-		                    me.resetload();  
-		            },
-		            error: function(xhr, type){
-		                me.resetload();
-		            }
+		            	if (data.type='fail') {
+		            		if (data.pages>currpage) {
+		            			currpage=currpage-1;
+		            		}else{JS.prolistpage.state=0}
+		            	}else{
+		            		// if (data.product.length==0) {JS.prolistpage.state=0}
+				                var result = '';
+				                 $.each(data.product,function(i,e){
+				                	result+="<li><a href='"+opt.path+"/product/detial.htm?pid="+e.id+"'><div class='img' style='height:"+width+"px;'><img src='"+data.prefix_url+"/"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>"
+				                });
+				                $('ul.probox').append(result);
+				                    me.resetload();  
+				            },
+				            error: function(xhr, type){
+				                me.resetload();
+				            }
+		            	}
+		            	
 		        });
 		    }
 		});
