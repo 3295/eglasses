@@ -67,7 +67,7 @@ JS.prolistpage = {
 		    //             me.resetload();
 		    //         }
 		    //     });
-		    // },
+		    // }, 
 	 	    loadDownFn : function(me){
 	 	    	if (JS.prolistpage.state==0) {return false};
 		        $.ajax({
@@ -79,31 +79,35 @@ JS.prolistpage = {
 		            },
 		            dataType: 'json',
 		            success: function(data){
-		            	if (data.type='fail') {
-		            		if (data.pages>currpage) {
-		            			currpage=currpage-1;
-		            		}else{JS.prolistpage.state=0}
-		            	}else{
-		            		// if (data.product.length==0) {JS.prolistpage.state=0}
-				                var result = '';
-				                 $.each(data.product,function(i,e){
-				                	result+="<li><a href='"+opt.path+"/product/detial.htm?pid="+e.id+"'><div class='img' style='height:"+width+"px;'><img src='"+data.prefix_url+"/"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>"
-				                });
-				                $('ul.probox').append(result);
-				                    me.resetload();  
-				            },
-				            error: function(xhr, type){
-				                me.resetload();
-				            }
-		            	}
-		            	
+		            	if (data.type=='success') {
+			            		if(JS.prolistpage.currpage<=data.pages){
+			            			var result = '';
+					                 $.each(data.product,function(i,e){
+					                	result+="<li><a href='"+opt.path+"/product/detial.htm?pid="+e.id+"'><div class='img' style='height:"+width+"px;'><img src='"+data.prefix_url+"/"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>";
+					                });
+					                $('ul.probox').append(result);
+					                 me.resetload();
+			            		}else {
+			            			JS.prolistpage.state=0;
+								}
+				                  
+		            	}else {
+		            		JS.prolistpage.currpage--;
+		            		me.resetload();
+						}
+		            },
+				    error: function(xhr, type){
+				         me.resetload();
+				    }
 		        });
 		    }
 		});
 	},
+	'gotop':function(){
+		if ($('.inner').scrollTop()>300) {$('.topscroll').show()}else{$('.topscroll').hide()};
+	},
 	'topscroll':function(m){
         $('.inner').scrollTop(0);
-        
 	}
 };
 JS.cartpage={
@@ -207,6 +211,13 @@ JS.prodetailspage={
 			$(a).removeClass("act");
 		}else{
 			$(a).addClass("act");
+		}
+	},
+	'fixhead':function(){
+		if ($('body').scrollTop()>400) {
+			$('.prodehead').addClass('fixhead').find('p').html('商品详情');
+		}else{
+			$('.prodehead').removeClass('fixhead').find('p').html('');
 		}
 	}
 };
