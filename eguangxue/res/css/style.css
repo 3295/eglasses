@@ -273,7 +273,8 @@ a{
 	border-radius: 20px;
 	background: url('../images/up.png') center no-repeat;
 	background-size: auto 15px;
-	background-color: #b81c22;
+	background-color: #000000;
+	opacity: 0.3;
 	position: fixed;
 	bottom: 10%;
 	right: 20px;
@@ -1120,13 +1121,13 @@ a{
 	border-bottom: 1px solid #dadee5;
 	position: fixed;
 	left: 0px;
-	top: 0px;
+	top: -1px;
 }
 .fixhead a.retu{
 	position: absolute;
 	left: 0px;
 	top: 5px;
-	background: url("res/images/return.png") center no-repeat;
+	background: url("../images/return.png") center no-repeat;
 	background-size: auto 15px;
 	background-color: #ffffff;
 }

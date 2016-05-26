@@ -29,6 +29,7 @@ JS.prolistpage = {
 	'init':function(opt){
 		if(typeof(opt)=='undefined') opt = {};
 		if(!opt.ptype) opt.ptype = '';
+		if(!opt.brand) opt.brand = '';
 		var imgs = $(".prolistpage ul.probox li a .img");
 		imgs.height(imgs.width());
 		width=imgs.width();
@@ -67,7 +68,7 @@ JS.prolistpage = {
 		    //             me.resetload();
 		    //         }
 		    //     });
-		    // }, 
+		    // },
 	 	    loadDownFn : function(me){
 	 	    	if (JS.prolistpage.state==0) {return false};
 		        $.ajax({
@@ -75,6 +76,7 @@ JS.prolistpage = {
 		            url: opt.path+'/product/index_ajax.htm',
 		            data:{
 		            	'ptype':opt.ptype,
+		            	'brand':opt.brand,
 		            	'currpage':++JS.prolistpage.currpage
 		            },
 		            dataType: 'json',
@@ -83,7 +85,7 @@ JS.prolistpage = {
 			            		if(JS.prolistpage.currpage<=data.pages){
 			            			var result = '';
 					                 $.each(data.product,function(i,e){
-					                	result+="<li><a href='"+opt.path+"/product/detial.htm?pid="+e.id+"'><div class='img' style='height:"+width+"px;'><img src='"+data.prefix_url+"/"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>";
+					                	result+="<li><a href='"+opt.path+"/product/detial.htm?pid="+e.id+"&pname="+e.productname+"'><div class='img' style='height:"+width+"px;'><img src='"+data.prefix_url+"/"+e.picture+"'></div><p class='pron'>"+e.productname+"</p><p class='pri'>￥"+e.present_price+"<span>￥"+e.price+"</span></p></a></li>";
 					                });
 					                $('ul.probox').append(result);
 					                 me.resetload();
@@ -104,7 +106,7 @@ JS.prolistpage = {
 		});
 	},
 	'gotop':function(){
-		if ($('.inner').scrollTop()>300) {$('.topscroll').show()}else{$('.topscroll').hide()};
+		if ($('.inner').scrollTop()>300) {$('.topscroll').show();}else{$('.topscroll').hide();};
 	},
 	'topscroll':function(m){
         $('.inner').scrollTop(0);
